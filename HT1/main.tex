@@ -1,0 +1,448 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+	\section{Sección A }
+Problemas de \cite{pinter2014book} - Sección 1.1
+	
+	\begin{problema}[Problema 1]
+		Probar el \textbf{teorema 1.8}. Para todas las oraciones $P,Q$ y $R$, las siguientes expresiones son verdaderas:
+		\begin{enumerate}
+			\item[i)] $P\vee Q \iff Q\vee P$.
+\begin{proof} Tenemos:
+	\begin{table}[H]
+		\centering 
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			$P$ & $Q$ & $P \wedge Q$ & $Q\wedge P$ & $P\wedge Q\iff Q\wedge P$ \\ \hline
+			V   & V   & V            & V           & V                         \\ \hline
+			V   & F   & V            & V           & V                         \\ \hline
+			F   & V   & V            & V           & V                         \\ \hline
+			F   & F   & F            & F           & V                         \\ \hline
+		\end{tabular}
+	\end{table}
+
+
+\end{proof}
+			
+
+			\item[i)'] $P\wedge Q \iff Q\wedge P$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $P \wedge Q$ & $Q\wedge P$ & $P\wedge Q\iff Q\wedge P$ \\ \hline
+						V   & V   & V            & V           & V                         \\ \hline
+						V   & F   & F            & F           & V                         \\ \hline
+						F   & V   & F            & F           & V                         \\ \hline
+						F   & F   & F            & F           & V                         \\ \hline
+					\end{tabular}
+				\end{table}
+			
+			\end{proof}
+			\item[ii)] $P\vee (Q\vee R)\iff (P\vee Q)\vee R$. 
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering 
+					\resizebox{\columnwidth}{!}{%
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $Q\vee R$ & $P\vee Q$ & $P\vee (Q\vee R)$ & $(P\vee Q)\vee R$ & $P\vee (Q\vee R)\iff (P\vee Q)\vee R$. \\ \hline
+						V   & V   & V   & V         & V         & V                 & V                 & V                                      \\ \hline
+						V   & V   & F   & V         & V         & V                 & V                 & V                                      \\ \hline
+						V   & F   & V   & V         & V         & V                 & V                 & V                                      \\ \hline
+						V   & F   & F   & F         & V         & V                 & V                 & V                                      \\ \hline
+						F   & V   & V   & V         & V         & V                 & V                 & V                                      \\ \hline
+						F   & V   & F   & V         & V         & V                 & V                 & V                                      \\ \hline
+						F   & F   & V   & V         & F         & V                 & V                 & V                                      \\ \hline
+						F   & F   & F   & F         & F         & F                 & F                 & V                                      \\ \hline
+					\end{tabular}%
+				}
+				\end{table}
+				
+			\end{proof}
+			\item[ii)'] $P\wedge (Q\wedge R)\iff (P\wedge Q)\wedge R$. 
+				\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+						\resizebox{\columnwidth}{!}{%
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $Q\wedge R$ & $P\wedge Q$ & $P\wedge (Q\wedge R)$ & $(P\wedge Q)\wedge R$ & $P\wedge (Q\wedge R)\iff (P\wedge Q)\wedge R$ \\ \hline
+						V   & V   & V   & V           & V           & V                     & V                     & V                                             \\ \hline
+						V   & V   & F   & F           & V           & F                     & F                     & V                                             \\ \hline
+						V   & F   & V   & F           & F           & F                     & F                     & V                                             \\ \hline
+						V   & F   & F   & F           & F           & F                     & F                     & V                                             \\ \hline
+						F   & V   & V   & V           & F           & F                     & F                     & V                                             \\ \hline
+						F   & V   & F   & F           & F           & F                     & F                     & V                                             \\ \hline
+						F   & F   & V   & F           & F           & F                     & F                     & V                                             \\ \hline
+						F   & F   & F   & F           & F           & F                     & F                     & V                                             \\ \hline
+					\end{tabular}%
+				}
+				\end{table}
+				
+				
+			\end{proof}
+			\item[iii)] $P\wedge (Q\vee R)\iff (P\wedge Q)\vee(P\wedge R)$.
+				\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering 
+					\resizebox{\columnwidth}{!}{%
+					\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $Q\vee R$ & $P\wedge Q$ & $P\wedge R$ & $P\wedge (Q\vee R)$ & $(P\wedge Q)\vee(P\wedge R)$ & $P\wedge (Q\vee R)\iff (P\wedge Q)\vee(P\wedge R)$. \\ \hline
+						V   & V   & V   & V         & V           & V           & V                   & V                            & V                                                   \\ \hline
+						V   & V   & F   & V         & V           & F           & V                   & V                            & V                                                   \\ \hline
+						V   & F   & V   & V         & F           & V           & V                   & V                            & V                                                   \\ \hline
+						V   & F   & F   & F         & F           & F           & F                   & F                            & V                                                   \\ \hline
+						F   & V   & V   & V         & F           & F           & F                   & F                            & V                                                   \\ \hline
+						F   & V   & F   & V         & F           & F           & F                   & F                            & V                                                   \\ \hline
+						F   & F   & V   & V         & F           & F           & F                   & F                            & V                                                   \\ \hline
+						F   & F   & F   & F         & F           & F           & F                   & F                            & V                                                   \\ \hline
+					\end{tabular}%
+			}
+				\end{table}
+				
+			\end{proof}
+			\item[iii)'] $P\vee (Q\wedge R)\iff (P\vee Q)\wedge(P\vee R)$.
+				\begin{proof}
+				Tenemos: 
+				
+				
+				\begin{table}[H]
+					\centering
+						\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $ (Q\wedge R)$ & $(P\vee Q)$ & $(P\vee R)$ & $P\vee (Q\wedge R)$ & $(P\vee Q)\wedge(P\vee R)$ & $P\vee (Q\wedge R)\iff (P\vee Q)\wedge(P\vee R)$. \\ \hline
+						V   & V   & V   & V              & V           & V           & V                   & V                          & V                                                 \\ \hline
+						V   & V   & F   & F              & V           & V           & V                   & V                          & V                                                 \\ \hline
+						V   & F   & V   & F              & V           & V           & V                   & V                          & V                                                 \\ \hline
+						V   & F   & F   & F              & V           & V           & V                   & V                          & V                                                 \\ \hline
+						F   & V   & V   & V              & V           & V           & V                   & V                          & V                                                 \\ \hline
+						F   & V   & F   & F              & V           & F           & F                   & F                          & V                                                 \\ \hline
+						F   & F   & V   & F              & F           & V           & F                   & F                          & V                                                 \\ \hline
+						F   & F   & F   & F              & F           & F           & F                   & F                          & V                                                 \\ \hline
+					\end{tabular}
+				%
+			}
+				\end{table}
+			
+			\end{proof}
+			\item[iv)] $P\vee P \iff P$.
+				\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering 
+					\begin{tabular}{|c|c|c|}
+						\hline
+						$P$ & $P \vee P$ & $P\vee P\iff P$ \\ \hline
+						V   & V          & V               \\ \hline
+						F   & F          & V               \\ \hline
+					\end{tabular}
+				\end{table}
+				
+			\end{proof}
+			\item[iv)'] $P\wedge P \iff P$.
+				\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|}
+						\hline
+						$P$ & $P \wedge P$ & $P\wedge P\iff P$ \\ \hline
+						V   & V            & V                 \\ \hline
+						F   & F            & V                 \\ \hline
+					\end{tabular}
+				\end{table}
+				
+			\end{proof}
+		\end{enumerate}
+	\end{problema}
+	\begin{problema}[Problema 4]
+		Probar que la sisguientes expresiones son verdaderas para todo $P$ y $Q$.
+		\begin{enumerate}
+			\item $(P \Rightarrow Q) \Leftrightarrow(\neg Q \Rightarrow \neg P)$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $\neg Q$ & $\neg P$ & $(P \Rightarrow Q)$ & $(\neg Q \Rightarrow \neg P)$ & $(P \Rightarrow Q) \Leftrightarrow(\neg Q \Rightarrow \neg P)$ \\ \hline
+						V   & V   & F        & F        & V                                & V                                                                        & V                                                              \\ \hline
+						V   & F   & V        & F        & F                                & F                                                                        & V                                                              \\ \hline
+						F   & V   & F        & V        & V                                & V                                                                        & V                                                              \\ \hline
+						F   & F   & V        & V        & V                                & V                                                                        & V                                                              \\ \hline
+					\end{tabular}
+				\end{table}
+				
+			\end{proof}
+			\item $(P \Rightarrow Q) \Leftrightarrow(\neg P \vee Q)$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $\neg P$ & $(P \Rightarrow Q)$ & $(\neg P \vee Q)$ & $(P \Rightarrow Q) \Leftrightarrow(\neg P \vee Q)$ \\ \hline
+						V   & V   & F        & V                                & V                 & V                                                  \\ \hline
+						V   & F   & F        & F                                & F                 & V                                                  \\ \hline
+						F   & V   & V        & V                                & V                 & V                                                  \\ \hline
+						F   & F   & V        & V                                & V                 & v                                                  \\ \hline
+					\end{tabular}
+				\end{table}
+				
+			\end{proof}
+			\item $(P \Rightarrow Q) \Leftrightarrow \neg(P \wedge \neg Q)$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $\neg Q$ & $\neg P$ & $(P \Rightarrow Q)$ & $(P \wedge \neg Q)$ & $\neg(P \wedge \neg Q)$ & $(P \Rightarrow Q) \Leftrightarrow \neg(P \wedge \neg Q)$. \\ \hline
+						V   & V   & F        & F        & V                   & F                   & V                       & V                                                          \\ \hline
+						V   & F   & V        & F        & F                   & V                   & F                       & V                                                          \\ \hline
+						F   & V   & F        & V        & V                   & F                   & V                       & V                                                          \\ \hline
+						F   & F   & V        & V        & V                   & F                   & V                       & V                                                          \\ \hline
+					\end{tabular}
+				\end{table}
+				
+			\end{proof}
+			\item $[P \wedge(P \Rightarrow Q)] \Rightarrow Q$
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $(P \Rightarrow Q)$ & $[P \wedge(P \Rightarrow Q)] $ & $[P \wedge(P \Rightarrow Q)] \Rightarrow Q$ \\ \hline
+						V   & V   & V                   & V                              & V                                           \\ \hline
+						V   & F   & F                   & F                              & V                                           \\ \hline
+						F   & V   & V                   & F                              & V                                           \\ \hline
+						F   & F   & V                   & F                              & V                                           \\ \hline
+					\end{tabular}
+				\end{table}
+				
+			\end{proof}
+			\item $[(P \vee Q) \wedge \neg P] \Rightarrow Q$.
+			\begin{proof}
+				Tenemos: 
+				\begin{table}[H]
+					\centering 
+					\begin{tabular}{|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $\neg P$ & $(P \vee Q)$ & $[(P \vee Q) \wedge \neg P]$ & $[(P \vee Q) \wedge \neg P] \Rightarrow Q$ \\ \hline
+						V   & V   & F        & V            & F                            & V                                          \\ \hline
+						V   & F   & F        & V            & F                            & V                                          \\ \hline
+						F   & V   & V        & V            & V                            & V                                          \\ \hline
+						F   & F   & V        & F            & F                            & V                                          \\ \hline
+					\end{tabular}
+				\end{table}
+			\end{proof}
+		\end{enumerate}
+
+	\end{problema}
+	\begin{problema}[Problema 5]
+		Probar que la sisguientes expresiones son verdaderas para todo $P$ y $Q$ y $R$.
+		\begin{enumerate}
+			\item $[(P \Rightarrow Q) \wedge(Q \Rightarrow R)] \Rightarrow(P \Rightarrow R)$
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $(P \Rightarrow Q) $ & $(Q \Rightarrow R)$ & $[(P \Rightarrow Q) \wedge(Q \Rightarrow R)] $ & $(P \Rightarrow R)$ & $[(P \Rightarrow Q) \wedge(Q \Rightarrow R)] \Rightarrow(P \Rightarrow R)$ \\ \hline
+						V   & V   & V   & V                    & V                   & V                                              & V                   & V                                                                          \\ \hline
+						V   & V   & F   & V                    & F                   & F                                              & F                   & V                                                                          \\ \hline
+						V   & F   & V   & F                    & V                   & F                                              & V                   & V                                                                          \\ \hline
+						V   & F   & F   & F                    & V                   & F                                              & F                   & V                                                                          \\ \hline
+						F   & V   & V   & V                    & V                   & V                                              & V                   & V                                                                          \\ \hline
+						F   & V   & F   & V                    & F                   & F                                              & V                   & V                                                                          \\ \hline
+						F   & F   & V   & V                    & V                   & V                                              & V                   & V                                                                          \\ \hline
+						F   & F   & F   & V                    & V                   & V                                              & V                   & V                                                                          \\ \hline
+					\end{tabular}%
+				}
+				\end{table}
+			
+			\end{proof}
+			\item $[(P \Rightarrow Q) \wedge(R \Rightarrow Q)] \Leftrightarrow[(P \vee R) \Rightarrow Q]$.
+			\begin{proof}
+				
+				\begin{table}[H]
+					\centering 
+					\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $(P \Rightarrow Q)$ & $(R \Rightarrow Q)$ & $(P \vee R)$ & $[(P \Rightarrow Q) \wedge(R \Rightarrow Q)] $ & $[(P \vee R) \Rightarrow Q]$ & $\iff$ \\ \hline
+						V   & V   & V   & V                   & V                   & V            & V                                              & V                            & V      \\ \hline
+						V   & V   & F   & V                   & V                   & V            & V                                              & V                            & V      \\ \hline
+						V   & F   & V   & F                   & F                   & V            & F                                              & F                            & V      \\ \hline
+						V   & F   & F   & F                   & V                   & V            & F                                              & F                            & V      \\ \hline
+						F   & V   & V   & V                   & V                   & V            & V                                              & V                            & V      \\ \hline
+						F   & V   & F   & V                   & V                   & F            & V                                              & V                            & V      \\ \hline
+						F   & F   & V   & V                   & F                   & V            & F                                              & F                            & V      \\ \hline
+						F   & F   & F   & V                   & V                   & F            & V                                              & V                            & V      \\ \hline
+					\end{tabular}%
+				}
+				\end{table}
+				
+			\end{proof}
+			\item $[(P \Rightarrow Q) \wedge(P \Rightarrow R)] \Leftrightarrow[P \Rightarrow(Q \wedge R)]$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $(P \Rightarrow Q)$ & $(Q \wedge R)$ & $(P \implies R)$ & $[(P \Rightarrow Q) \wedge(P \Rightarrow R)]$ & $[P \Rightarrow(Q \wedge R)]$ & $\iff$ \\ \hline
+						V   & V   & V   & V                   & V              & V                & V                                             & V                             & V      \\ \hline
+						V   & V   & F   & V                   & F              & F                & F                                             & F                             & V      \\ \hline
+						V   & F   & V   & F                   & F              & V                & F                                             & F                             & V      \\ \hline
+						V   & F   & F   & F                   & F              & F                & F                                             & F                             & V      \\ \hline
+						F   & V   & V   & V                   & V              & V                & V                                             & V                             & V      \\ \hline
+						F   & V   & F   & V                   & F              & V                & V                                             & V                             & V      \\ \hline
+						F   & F   & V   & V                   & F              & V                & V                                             & V                             & V      \\ \hline
+						F   & F   & F   & V                   & V              & V                & V                                             & V                             & V      \\ \hline
+					\end{tabular}
+				%
+			}
+				\end{table}
+				
+			\end{proof}
+		\end{enumerate}
+		
+	\end{problema}
+	\begin{problema}[Problema 6]
+		Probar que, para todas las expresiones $P,Q$ y $R$, si $Q\iff R$ es verdadero, entonces las siguientes expresiones son verdaderas: 
+		\begin{enumerate}
+			\item  $P \vee Q \Leftrightarrow P \vee R$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering
+					
+					\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $Q\iff R$ & $P \vee Q$ & $P \vee R$ & $P \vee Q \Leftrightarrow P \vee R$ & $(Q\iff R) \implies (P \vee Q \Leftrightarrow P \vee R)$ \\ \hline
+						V   & V   & V   & V         & V          & V          & V                                   & V                                                    \\ \hline
+						V   & V   & F   & F         & V          & V          & V                                   & V                                                    \\ \hline
+						V   & F   & V   & F         & V          & V          & V                                   & V                                                    \\ \hline
+						V   & F   & F   & V         & V          & V          & V                                   & V                                                    \\ \hline
+						F   & V   & V   & V         & V          & V          & V                                   & V                                                    \\ \hline
+						F   & V   & F   & F         & V          & F          & F                                   & V                                                    \\ \hline
+						F   & F   & V   & F         & F          & V          & F                                   & V                                                    \\ \hline
+						F   & F   & F   & F         & F          & F          & V                                   & V                                                    \\ \hline
+					\end{tabular}%
+				}
+				\end{table}
+				
+				
+			\end{proof}
+			\item  $P \wedge Q \Leftrightarrow P \wedge R$.
+			\begin{proof}
+				Tenemos: 
+			
+				\begin{table}[H]
+					\centering 
+						\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $Q\iff R$ & $P \wedge Q $ & $P \wedge R$ & $ P \wedge Q \Leftrightarrow P \wedge R$ & $(Q\iff R) \implies (P \wedge Q \Leftrightarrow P \wedge R)$ \\ \hline
+						V   & V   & V   & V         & V             & V            & V                                        & V                                                        \\ \hline
+						V   & V   & F   & F         & V             & F            & F                                        & V                                                        \\ \hline
+						V   & F   & V   & F         & F             & V            & V                                        & V                                                        \\ \hline
+						V   & F   & F   & V         & F             & F            & V                                        & V                                                        \\ \hline
+						F   & V   & V   & V         & F             & F            & V                                        & V                                                        \\ \hline
+						F   & V   & F   & F         & F             & F            & V                                        & V                                                        \\ \hline
+						F   & F   & V   & F         & F             & F            & V                                        & V                                                        \\ \hline
+						F   & F   & F   & F         & F             & F            & V                                        & V                                                        \\ \hline
+					\end{tabular}%
+				}
+				\end{table}
+				
+			\end{proof}
+			\item $(P \Rightarrow Q) \Leftrightarrow(P \Rightarrow R)$.
+			\begin{proof}
+				Tenemos: 
+				
+				\begin{table}[H]
+					\centering 
+						\resizebox{\columnwidth}{!}{ %
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
+						\hline
+						$P$ & $Q$ & $R$ & $Q\iff R$ & $(P \Rightarrow Q) $ & $(P \Rightarrow R)$ & $[(P \Rightarrow Q) \Leftrightarrow(P \Rightarrow R)]$ & $(Q\iff R) \implies [(P \Rightarrow Q) \Leftrightarrow(P \Rightarrow R)]$ \\ \hline
+						V   & V   & V   & V         & V                    & V                   & V                                                      & V                                                                         \\ \hline
+						V   & V   & F   & F         & V                    & F                   & F                                                      & V                                                                         \\ \hline
+						V   & F   & V   & F         & F                    & V                   & F                                                      & V                                                                         \\ \hline
+						V   & F   & F   & V         & F                    & F                   & V                                                      & V                                                                         \\ \hline
+						F   & V   & V   & V         & V                    & V                   & V                                                      & V                                                                         \\ \hline
+						F   & V   & F   & F         & V                    & V                   & V                                                      & V                                                                         \\ \hline
+						F   & F   & V   & F         & V                    & V                   & V                                                      & V                                                                         \\ \hline
+						F   & F   & F   & F         & V                    & V                   & V                                                      & V                                                                         \\ \hline
+					\end{tabular}
+				%
+			}
+				\end{table}
+				
+			\end{proof}
+		\end{enumerate}
+
+	\end{problema}
+
+\section{Sección B }
+Dado los conjuntos $A,B$ y $C$, demuestre que: 
+
+\begin{problema}
+	$A\subseteq A$.
+\end{problema}
+
+\begin{problema}
+	Si $A\subseteq B$ y $B\subseteq C$ entonces $A=B$.
+\end{problema}
+
+\begin{problema}
+	Si $A\subseteq B$ y $B\subseteq C$ entonces $A\subseteq C$. 
+\end{problema}
+
+\begin{problema}
+	Si  $A\subset B$ entonces $-(B\subset A)$.
+\end{problema}
+
+\begin{problema}
+	Si $A\subset B$ entonces $A\subseteq B$. 
+\end{problema}
+
+
+%---------------------------
+\bibliographystyle{apalike}
+\bibliography{referencias.bib}
+
+\end{document}
