@@ -424,21 +424,53 @@ Dado los conjuntos $A,B$ y $C$, demuestre que:
 	$A\subseteq A$.
 \end{problema}
 
+\begin{proof}
+	A probar: $A\subseteq A$. Por definición de contención, $\forall x (x\in A\implies x\in A)\implies A\subseteq A$.
+\end{proof}
+
+
+
+
+%-----
+
+
 \begin{problema}
-	Si $A\subseteq B$ y $B\subseteq C$ entonces $A=B$.
+	Si $A\subseteq B$ y $B\subseteq A$ entonces $A=B$.
 \end{problema}
+\begin{proof}
+	A probar: $A=B$. Por hipótesis, $A\subseteq B$ y $B\subseteq A$. $\implies$ Por definición de contención, $[\forall x(x\in A \implies x\in B)]\wedge [\forall x(x\in B \implies x\in A)]$. $\implies 	\forall x[(x\in A \implies x\in B)\wedge (x\in B \implies x\in A)]\implies \forall x[x\in A\iff x\in B]$. $\implies$ Por el axioma de extensión,	$A=B$. 
+\end{proof}
+
+
+
+%------
 
 \begin{problema}
 	Si $A\subseteq B$ y $B\subseteq C$ entonces $A\subseteq C$. 
 \end{problema}
+\begin{proof}
+	A probar: $A\subseteq C$ (i.e. $x\in A\implies x\in C$). Por hipótesis, $A\subseteq B$ y $B\subseteq C$. $\implies$ Por definición de contención, $[\forall x(x\in A\implies x\in B)\wedge \forall x (x\in B \implies x\in C)]$ $\implies \forall x [(x\in A\implies x\in B)\wedge (x\in B \implies x\in C)]\implies \forall x(x\in A\implies x\in C)\implies A\subseteq C$.
+\end{proof}
+
+
+%-------
 
 \begin{problema}
-	Si  $A\subset B$ entonces $-(B\subset A)$.
+	Si  $A\subset B$ entonces $\neg(B\subset A)$.
 \end{problema}
 
+\begin{proof}
+	Por reducción al absurdo, $(A\subset B)\wedge (B\subset A)$. $\implies$ Por la definición de contención estricta $[(A\subseteq B)\wedge (A\neq B)]\wedge [(B\subseteq A)\wedge (B\neq A)]\implies [(A\subseteq B)\wedge (B\subseteq A)\wedge (A\neq B)]$. $\implies$ Por el Problema 2.2 sabemos que si $A\subseteq B$ y $B\subseteq A$ entonces $A=B$, tal que $[(A=B)\wedge (A\neq B)] (\to\gets)$. $\therefore  \neg(B\subset A)$. 
+\end{proof}
+
+%-----------
 \begin{problema}
 	Si $A\subset B$ entonces $A\subseteq B$. 
 \end{problema}
+
+\begin{proof}
+	A probar: $A\subseteq B$ (i.e. $x\in A\implies x\in B)$. Por hipótesis, $A\subset B$. $\implies$ Por definición de contención estricta, $(A\subseteq B)\wedge (A\neq B)$. 
+\end{proof}
 
 
 %---------------------------
