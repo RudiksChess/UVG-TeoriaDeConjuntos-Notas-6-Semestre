@@ -1,0 +1,36 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+	
+Para A y B conjuntos:
+\begin{enumerate}
+	\item $(A \cap B) \subseteq A$
+	\item Si $A \subseteq B$ entonces 
+	\begin{enumerate}
+		\item  $\quad(A \cap B)=A$
+		\item $\quad(A \cup B)=B$
+	\end{enumerate}
+	\item $A \subseteq(A \cup B)$
+	\item Si $A \subseteq C$ y $B \subseteq C$ entonces $(A \cup B) \subseteq C$.
+	\item $ A \cap(A \sim B)=A \sim B$
+	\item $(A \cap B) \sim B=\varnothing$
+	\item $(A \sim B) \cap B=\varnothing$
+	\item Si se define la diferencia simétrica como $$A \div B=(A \sim B) \cup(B \sim A)$$.
+	Entonces demuestre que
+	\begin{enumerate}
+		\item $(A \div \varnothing)=A$
+		\item  Si $A=B$ entonces $A \div B=\varnothing$
+	\end{enumerate}
+\end{enumerate}
+
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}
