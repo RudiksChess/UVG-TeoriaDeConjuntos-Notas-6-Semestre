@@ -1,0 +1,53 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+
+\begin{cajita}
+	\begin{definicion}(Pareja ordenada)
+		Si $\Delta \neq \square \Rightarrow(x, y)=\{\{x, \Delta\},\{y, \square\}\}$
+	\end{definicion}
+\end{cajita}
+
+\begin{cajita}
+	\begin{teorema}
+		$\{x,y\}=\{u,v\}\implies (x=u\wedge y=v)\vee (x=v\wedge y=u)$. 
+	\end{teorema}
+\end{cajita}
+
+\begin{problema}
+	$(x,y)=(u,v)\implies [x=u\wedge y=v]$. 
+\end{problema}
+\begin{proof}
+	Considerando la definición 1, $$(x,y)=(u,v)\implies \{\{x,\Delta\},\{y,\square\}\} =\{\{u,\Delta\},\{v,\square\}\}.$$
+	Por teorema 1, sabemos que $$\underbrace{\left[\left(\{x,\Delta\}=\{u,\Delta\}\right)\wedge \left(\{y,\square\}=\{v,\square\}\right)\right]}_{(1)}\vee \underbrace{\left[\left(\{x,\Delta\}=\{v,\square\}\right)\wedge\left( \{y,\square\}=\{u,\Delta\}\right)\right]}_{(2)}.$$
+	
+	Ahora bien, analizamos el caso (1): $\left(\{x,\Delta\}=\{u,\Delta\}\right)\wedge \left(\{y,\square\}=\{v,\square\}\right)$. Aplicamos el teorema 1, nuevamente: 
+	\begin{gather*}
+		\left[(x=u\wedge \Delta=\Delta)\vee (x=\Delta \wedge \Delta=u)\right]\wedge\left[(y=v\wedge \square=\square)\vee (y=\square\wedge \square=v)\right] \implies\\
+		\implies [(x=u)\vee (x=u=\Delta)]\wedge [(y=v)\vee (y=v=\square)] \implies \\
+		\implies [x=u]\wedge [y=v]. 
+	\end{gather*}
+
+	
+	El caso (2): $\left(\{x,\Delta\}=\{v,\square\}\right)\wedge\left( \{y,\square\}=\{u,\Delta\}\right)$. Aplicando el teorema 1, tenemos: 
+	
+	\begin{gather*}
+		\left[\underbrace{(x=v\wedge \Delta=\square)}_{falso}\vee (x=\square \wedge \Delta=v)\right]\wedge\left[\underbrace{(y=u\wedge \square=\Delta)}_{falso}\vee (y=\Delta\wedge \square=u)\right]\implies\\ 
+		\implies [(x=\square \wedge \Delta=v)\wedge (y=\Delta\wedge \square=u)]\implies [x=u]\wedge [y=v].
+	\end{gather*}
+
+$\therefore (x,y)=(u,v)\implies [x=u\wedge y=v]$. 
+
+	
+\end{proof}
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

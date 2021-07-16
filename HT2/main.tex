@@ -10,21 +10,51 @@
 Para A y B conjuntos:
 \begin{enumerate}
 	\item $(A \cap B) \subseteq A$
+	\begin{proof}
+		$x\in A\cap B\implies [x\in A \wedge x \in B]\implies x\in A$. Por axioma de extensión $(A \cap B) \subseteq A$. 
+	\end{proof}
 	\item Si $A \subseteq B$ entonces 
 	\begin{enumerate}
-		\item  $\quad(A \cap B)=A$
-		\item $\quad(A \cup B)=B$
+		\item  $(A \cap B)=A$
+		\begin{proof}
+			Por hipótesis, $A\subseteq B$, $x\in A\implies x\in B$. Entonces $x\in A\cap B\iff (\underbrace{x\in A}_{\implies x\in B} \wedge x \in B)\iff x\in A$. Por axioma de extensión $(A \cap B)=A$. 
+		\end{proof}
+		\item $(A \cup B)=B$
+		\begin{proof}
+			Por hipótesis, $A\subseteq B$, $x\in A\implies x\in B$. Entonces $x\in A\cup B\iff (\underbrace{x\in A}_{\implies x\in B}\vee x\in B)\iff x\in B$. Por axioma de extensión, $(A \cup B)=B$. 
+		\end{proof}
 	\end{enumerate}
 	\item $A \subseteq(A \cup B)$
+	\begin{proof}
+		$x\in A\implies (x\in A\vee x \in B)\implies x\in A\cup B$. Por axioma de extensión, $A \subseteq(A \cup B)$. 
+	\end{proof}
 	\item Si $A \subseteq C$ y $B \subseteq C$ entonces $(A \cup B) \subseteq C$.
+	\begin{proof}
+		Por hipótesis, $[x\in A\implies x\in C]\wedge [x\in B\implies x\in C]$. Sea $x\in A\cup B$. Entonces $(\underbrace{x\in A}_{\implies x\in C}\vee \underbrace{x\in B}_{\implies x\in C})$, por hipótesis $x\in C$. Por axioma de extensión, $(A \cup B) \subseteq C$. 
+	\end{proof}
 	\item $ A \cap(A \sim B)=A \sim B$
+	\begin{proof}
+		$x\in [A\cap (A\sim B)]\iff x\in A  \wedge[ x \in (A\sim B)]\iff x\in A \wedge [x\in A \wedge x\not\in B]\iff (x\in A)\wedge (x\not\in B)$. Por axioma de extensión, $ A \cap(A \sim B)=A \sim B$. 
+	\end{proof}
 	\item $(A \cap B) \sim B=\varnothing$
+	\begin{proof}
+		$x\in [(A\cap B)\sim B]\iff [x\in (A\cap B)]\wedge [x\not\in B]\iff [x\in A \wedge x\in B]\wedge [x\not\in B]\iff x\in A \wedge (x\in B\wedge x\not\in B)$ ($\to\gets$). $\forall x,  x\not\in [(A \cap B) \sim B]\implies (A \cap B) \sim B=\varnothing$. 
+	\end{proof}
 	\item $(A \sim B) \cap B=\varnothing$
+	\begin{proof}
+		$x\in [(A \sim B) \cap B]\iff [x\in (A\sim B)\wedge x\in B]\iff [x\in A \wedge x\not\in B\wedge x\in B] (\to \gets)$. $\forall x, x\not\in [(A \sim B) \cap B] \implies (A \sim B) \cap B=\varnothing$. 
+	\end{proof}
 	\item Si se define la diferencia simétrica como $$A \div B=(A \sim B) \cup(B \sim A)$$.
 	Entonces demuestre que
 	\begin{enumerate}
 		\item $(A \div \varnothing)=A$
+		\begin{proof}
+			Usamos la definición de diferencia simétrica, $(A \div \varnothing)=(A\sim \varnothing)\cup (\varnothing\sim A)$. Entonces, $x\in [(A\sim \varnothing)\cup (\varnothing\sim A)]\iff [x\in (A\sim \varnothing) \vee x\in  (\varnothing\sim A)]\iff [x\in A \wedge x \not\in \varnothing]\vee [x\in \varnothing \wedge x\not\in A]$. Si (1) $x\in A \wedge x \not\in \varnothing\implies x\in A$, y (2) $[x\in \varnothing \wedge x\not\in A]$ ambos son falsos, entonces $x\in A$. Por axioma de extensión, $(A \div \varnothing)=A$. 
+		\end{proof}
 		\item  Si $A=B$ entonces $A \div B=\varnothing$
+		\begin{proof}
+			Por hipótesis, $x\in A\iff x\in B$. Por la definición de diferencia simétrica $A\div B= (A \sim B) \cup(B \sim A)$. Entonces $x\in [(A \sim B) \cup(B \sim A)]\iff [x\in (A \sim B)]\vee [x\in (B \sim A)]\iff [x\in A\wedge x\not\in B]\vee [x\in B\wedge x\not\in A] $. Por hipótesis, $[x\in A\wedge x\not\in A]\vee [x\in B\wedge x\not\in B] (\to\gets)$. $\forall x, x\not\in (A\div B) \implies A \div B=\varnothing$. 
+		\end{proof}
 	\end{enumerate}
 \end{enumerate}
 
