@@ -1,0 +1,208 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+\begin{enumerate}
+	\item Leer las secciones 2.7 (Axioma del conjunto Potencia) y 2.8 (Producto Cartesiano entre conjuntos)
+	\item Prepararse para presentar dichos ejercicios en clase el día jueves 30 de Julio .
+\end{enumerate}
+\section{Página 32}
+	Resolver todos los ejercicios de la página 32 (Total 6).
+	
+	\begin{problema}
+		Hallar: $\mathcal{P}\{\text{Arquímedes} \}, \mathcal{P}\mathcal{P}\{\text{Arquímedes} \}, \mathcal{P}\{\{\text{Arquímedes}, Newton \},\varnothing \}$.
+	\end{problema}
+	\begin{sol}
+		Tenemos: 
+		\begin{enumerate}
+			\item $\mathcal{P}\{\text{Arquímedes} \}=\{\varnothing, \text{Arquímedes} \}$
+			\item $\mathcal{P}\mathcal{P}\{\text{Arquímedes} \}=\{\varnothing,\{\varnothing\},\{\text{Arquímedes} \},  \{\varnothing, \text{Arquímedes} \}\}$
+			\item $\mathcal{P}\{\{\text{Arquímedes}, Newton \},\varnothing \}=\{\varnothing,\{\{\text{Arquímedes}, Newton \}\}, \{\varnothing\}, \{\text{Arquímedes}, Newton \}\}$
+		\end{enumerate}
+	\end{sol}
+
+%------
+
+	\begin{problema}
+	Hallar: $\mathcal{P}\mathcal{P}\mathcal{P}\varnothing$.
+\end{problema}
+\begin{sol}
+	Considerando $\mathcal{P}\varnothing =\{\varnothing\}$. 
+	$$\implies \mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\}\}\implies \mathcal{P}\mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\},\{\{\varnothing\}\}, \{\varnothing,\{\varnothing\}\} \} $$
+\end{sol}
+
+%------
+
+	\begin{problema}
+	Demostrar los teoremas 88 y 90. 
+	\begin{enumerate}
+		\item[88.] $\varnothing\in \mathcal{P}A$.
+		\begin{proof}
+			Previamente, conocíamos que $\varnothing \subseteq A$. $\therefore$ Por teorema de caracterización, $$\varnothing \subseteq A \implies \varnothing\in \mathcal{P}A.$$		\end{proof}
+		
+		\item[99.] $\mathcal{P}\mathcal{P}\varnothing=\{\varnothing,\{\varnothing\}\}$.
+		\begin{proof}
+			Se cumple trivialmente por la definición, ver el \textbf{Problema 1.2}. 
+		\end{proof}
+	\end{enumerate}
+\end{problema}
+
+
+%------
+	\begin{problema}
+	Demostrar el teorema 93. $\mathcal{P}(A\cap B)=(\mathcal{P} A)\cap (\mathcal{P}B)$. 
+\end{problema}
+\begin{proof}
+	$C\in \mathcal{P}(A\cap B) \iff C\subseteq (A\cap B)\iff C\subseteq  A \wedge C\subseteq  B \iff C\in   \mathcal{P}A \wedge C\in  \mathcal{P} B\iff  C\in [(\mathcal{P} A)\cap (\mathcal{P}B)]. \therefore \ \mathcal{P}(A\cap B)=(\mathcal{P} A)\cap (\mathcal{P}B)$
+\end{proof}
+
+%------
+	\begin{problema}
+	Demostrar teorema 94. $\mathcal{P}(A \sim B)\subseteq ((\mathcal{P}A)\sim(\mathcal{P}B) )\cup \{\varnothing\}$.
+\end{problema}
+\begin{proof}
+	
+	Tenemos dos casos: 
+	\begin{enumerate}
+		\item $A\sim B$ no es vacío. $C\in \mathcal{P}(A \sim B) \iff C\subseteq (A\sim B)\iff C\subseteq A \wedge C\not\subseteq B\iff C\in \mathcal{P}A \wedge C\not\in \mathcal{P}B\implies C\in [(\mathcal{P}A) \sim (\mathcal{P} B)]$.
+		\item $A\sim B$ es vacío. $\implies \mathcal{P}(A\sim B)= \{\varnothing\}$.
+	\end{enumerate}
+	
+	 Por lo tanto, $\mathcal{P}(A \sim B)\subseteq ((\mathcal{P}A)\sim(\mathcal{P}B) )\cup \{\varnothing\}$.
+\end{proof}
+
+%------
+	\begin{problema}
+	Dar contraejemplos para mostrar que no siempre es el caso de que 
+	\begin{enumerate}
+		\item $(\mathcal{P}A)\cup (\mathcal{P}B)=\mathcal{P}(A\cup B)$.
+		\begin{sol}
+			Supóngase que tenemos un conjunto $A=\{0,1\}$ y $B=\{2\}$. 
+			\begin{enumerate}
+				\item $(\mathcal{P}A)\cup (\mathcal{P}B)$. Implica $\mathcal{P}A=\{0,\{0\}, \{1\}, \{0,1\}\}$, $\mathcal{P}B=\{0,\{2\}\}$. Entonces, $$(\mathcal{P}A)\cup (\mathcal{P}B)= \{0,\{0\}, \{1\}, \{0,1\}, \{2\}\}.$$
+				\item $\mathcal{P}(A\cup B)$. Implica $A\cup B=\{0,1,2\}$. Entonces $$\mathcal{P}(A\cup B)= \{0, \{0\}, \{1\},\{2\},\{0,1\},\{0,2\},\{1,2\}, \{0,1,2\}\}$$
+			\end{enumerate}
+		Por lo tanto, $(\mathcal{P}A)\cup (\mathcal{P}B)\neq \mathcal{P}(A\cup B)$
+		\end{sol}
+		\item $\mathcal{P}(A \sim B)= (\mathcal{P}A)\sim (\mathcal{P}B)$.
+		\begin{sol}
+			Supóngase que $A=\{2,1\}$ y $B=\{2\}$. 
+			\begin{enumerate}
+				\item $\mathcal{P}(A \sim B)$. Implica $A\sim B= \{1\}$. Entonces $\mathcal{P}(A \sim B)=\{0,\{1\}\}$.
+				\item $(\mathcal{P}A)\sim (\mathcal{P}B)$. Implica $(\mathcal{P}A)=\{0,\{2\},\{1\},\{2,1\} \}$ y $(\mathcal{P}B)=\{0,\{2\}\}$. Entonces: 
+				$$(\mathcal{P}A)\sim (\mathcal{P}B)=\{\{1\},\{2,1\}\}.$$
+			\end{enumerate}
+		Por lo tanto, 
+		$$\mathcal{P}(A \sim B)\neq (\mathcal{P}A)\sim (\mathcal{P}B).$$
+		\end{sol}
+	\end{enumerate}
+\end{problema}
+
+
+%------
+\section{Página 34}	
+	Resolver todos los ejercicios de la página 34 (Total 6)
+	
+	\begin{problema}
+	 Demostrar los teoremas 96 y 97 .\begin{enumerate}
+	 	\item[96.] $x\in A\times B\iff (\exists y)(\exists z)(y\in A\wedge z\in B\wedge x=\langle y, z\rangle)$.
+	 	\begin{proof}
+	 		Inmediatamente por el teorema de existencia. Sea $A\times B = A\times B$, entonces 
+	 		$\forall x\in A\times B\iff (\exists y)(\exists z)(y\in A\wedge z\in B\wedge x=\langle y, z\rangle)$.
+	 	\end{proof}
+	 	
+	 	\item[97.] $\langle x,y\rangle \in A\times B \iff x\in A \wedge y\in B$.
+	 	\begin{proof}
+	 		Inmediatamente por la definición. Sea $A\times B=\{\langle x,y\rangle: x\in A\wedge y\in B\}$. Por lo tanto, $\langle x,y\rangle \in A\times B \iff x\in A \wedge y\in B$.
+	 	\end{proof}
+	 	
+	 \end{enumerate}
+\end{problema}
+
+%------
+
+\begin{problema}
+	Demostrar el teorema 101. $B\subseteq C\implies A\times B\subseteq A\times C$.
+\end{problema}
+\begin{proof}
+	Por hipótesis, $B\subseteq C\iff (y\in B\implies y\in C)$. Entonces, supóngase que $\langle x,y\rangle \in A\times B\implies x\in A\wedge y\in B\implies x\in A\wedge y\in C\implies\langle x,y\rangle \in A\times C $. $\therefore A\times B\subseteq A\times C$. 
+\end{proof}
+
+%------
+
+\begin{problema}
+	Demostrar los teoremas 103  y 104.
+	\begin{enumerate}
+		\item[103.] $A\times (B\cup C)=(A\times B)\cup (A\times C)$.
+		\begin{proof}
+			Supóngase $\langle x, y\rangle \in \left[A\times (B\cup C)\right]\iff x\in A\wedge [y\in (B\cup C)]\iff x\in A \wedge (y\in B\vee y\in C)\iff (x\in A\wedge y\in B)\vee(x\in A\wedge y\in C)\iff \langle x, y \rangle \in (A\times B)\cup (A\times C)$. $\therefore A\times (B\cup C)=(A\times B)\cup (A\times C)$.  
+		\end{proof}
+		\item[104.] $A\times (B \sim C)= (A\times B)\sim (A\times C)$.
+			\begin{cajita}
+			Nótese que $\langle x,y \rangle \not\in A\times B \iff x\not\in A \vee x\not\in B  $.
+		\end{cajita}
+	\begin{proof}
+			$\langle x, y\rangle \in A\times (B\sim C)\iff x\in A \wedge \left[y\in (B\sim C)\right]\iff x\in A \wedge [(y\in B)\wedge (y\not\in C)]\iff [(x\in A) \wedge (y\in B)] \wedge  ( y\not\in C)\iff \langle x, y\rangle \in (A\times B)\sim (A\times C) $. 
+	\end{proof}
+	\end{enumerate}
+\end{problema}
+
+
+%------
+\begin{problema}
+	Dar un contra-ejemplo simple para mostrar que, en general, no es el caso de que
+	$$
+	A \cup(B \times C)=(A \times B) \cup(A \times C)
+	$$
+\end{problema}
+\begin{proof}
+	Supóngase $A=\{1\}, B=\{2\}, C=\{3\}$. Comprobamos:
+	\begin{enumerate}
+		\item $A \cup(B \times C)$.  Determinamos, $(B\times C)=\{\langle 2,3\rangle\}$ tal que $A \cup(B \times C)=\{1,\langle 2,3\rangle \}$
+		\item $(A \times B) \cup(A \times C)$. Determinamos, $(A \times B) = \{\langle 1, 2\rangle \}$ y $(A\times C)=\{\langle 1, 3\rangle\}$. Entonces, $(A \times B) \cup(A \times C)= \{\langle 1, 2\rangle, \langle 1, 3\rangle \}$
+	\end{enumerate}
+	Por lo tanto, $$
+	A \cup(B \times C)\neq (A \times B) \cup(A \times C)
+	$$
+\end{proof}
+
+%------
+\begin{problema}
+	¿Es asociativa la operación producto cartesiano?  Si lo es, demostrarlo. Si no, dar un contra-ejemplo.
+\end{problema}
+\begin{sol}
+	Procedemos con un contraejemplo para deducir que $$A\times(B\times C)\neq(A\times B)\times C$$
+	Sea $A=\{1\}, B=\{2\}, C=\{3\}$, entonces 
+	\begin{enumerate}
+		\item $A\times(B\times C)$. Determinamos $(B\times C)=\{\langle 2,3\rangle \}$. Por lo tanto, $A\times(B\times C)= \{\langle 1, \langle 2,3\rangle \rangle \} $. 
+		\item $(A\times B)\times C$. Determinamos $(A\times B)=\{\langle 1,2\rangle\}$. Por lo tanto, $(A\times B)\times C= \{\langle \langle 1,2\rangle, 3\rangle \}$
+	\end{enumerate}
+Por lo tanto, no es asociativa.
+\end{sol}
+
+%------
+\begin{problema}
+	Demostrar que
+	$$
+	A \times \bigcap B=\bigcap_{C \in B}(A \times C) \textcolor{red}{=\bigcap (A\times B)}
+	$$
+\end{problema}
+\begin{cajita}
+	Según Suppes, 
+	$$\bigcup A= \bigcup_{B\in A}B\quad \text{ y }\quad \bigcap A=\bigcap_{B\in A}B $$
+\end{cajita}
+\begin{proof}
+	$\langle x,y\rangle \in A\times \bigcap B\iff x\in A \wedge y\in \bigcap B\iff (x\in A)\wedge [(\forall C)(C\in B\implies x\in C)\wedge (\exists C)(C\in B)]\iff (\forall C)(x\in A\wedge x\in C)\wedge (\exists C)(C\in B)\iff \bigcap_{C \in B}(A \times C).$
+\end{proof}
+
+%------
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}
