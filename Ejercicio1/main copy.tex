@@ -1,0 +1,28 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+	\begin{problema}
+		$\forall A, \emptyset \subseteq A$. 
+	\end{problema}
+
+\begin{cajita}
+	\begin{prop}
+		$$p\implies q \equiv q\vee \neg p$$
+	\end{prop}
+\end{cajita}
+\begin{proof}
+	A probar: $\emptyset \subseteq A$ (i.e. $\forall x\in \emptyset \implies x\in A$). $\implies$ Por contrapositiva $x\not\in A\implies x\not\in\emptyset$.  Sabemos por teorema que $\forall x(x\not\in \emptyset)$, $x\not\in A\implies \underbrace{x\not\in\emptyset}_{verdadero}$ . Entonces $\underbrace{x\in \emptyset}_{falso} \implies x\in A$. Por la Proposición 1, $(x\in A)\vee \neg(falso)\equiv(x\in A)\vee (verdadero)\implies verdadero $.  Por lo tanto, $\emptyset \subseteq A$. 
+
+\end{proof}
+
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

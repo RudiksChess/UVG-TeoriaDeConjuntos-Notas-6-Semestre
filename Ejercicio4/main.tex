@@ -1,0 +1,30 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+
+\begin{table}[H]
+	\resizebox{\columnwidth}{!}{%
+	\begin{tabular}{|c|l|}
+		\hline
+		\textbf{Axioma de regularidad}                                                                                                                                                                                         & \begin{tabular}[c]{@{}l@{}}Cuando $x$ no es claro que es un conjunto: \\ $A\neq 0 \implies (\exists x)[x\in A\wedge (\forall y)(y\in x\implies y\not\in A)]$\\ Cuando $x$ es claro que es un conjunto: \\ $A\neq 0 \implies (\exists x)[x\in A\wedge (A\cap x=0)]$\end{tabular}                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Explique con sus palabras \\ por qué es tan importante \\ el axioma de regularidad\end{tabular}}                                                                                    & \begin{tabular}[c]{@{}l@{}}Primero es necesario definir el por qué de su existencia, \\ ya que lo que buscaes establecerla inexistencia de paradojas; \\ debido a que el conjunto de todos los conjuntos de por sí no \\ hace sentido ni siquiera de una manera intuitiva (tal y como\\ lo definió Russell y que provocó una gran revolución en \\ el mundo de las matemáticas). Su principal motivo de \\ ser es asegurar la consistencia de la teoría de conjuntos.\end{tabular}                                                                                                                                                             \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Teorema 105\\ \\ En la demostración del \\ teorema 105 se concluye \\ $\{A\}\cap A=\varnothing$. \\ ¿Cómo se utiliza el \\ axioma de regularidad\\  para comprobarlo?\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Nótese que en el argumento de la prueba se utiliza la \\ segunda definición del axioma de regularidad, ya que\\ es evidente que estamos trabajando con un conjunto. \\ El axioma de regularidad se utiliza como: \\ $\{A\}\neq 0 \implies (\exists x)[x\in \{A\}\wedge (\{A\}\cap x=0)]$\\ y es a partir de allí que se produce la contradicción,\\ ya que se había definido que $\{A\}\cap A$ por lo\\ menos tenía contenido a $A$.\end{tabular}                                                                                                                                                                   \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Teorema 106\\ \\ ¿Cómo se aplica el \\ teorema 43 para la \\ demostración \\ del teorema 106?\end{tabular}}                                                                         & \begin{tabular}[c]{@{}l@{}}Ya que no tenemos un par ordenado, significa que el $x$ \\ que está $\{A,B\}$ podría ser $A$ o podría ser $B$.\\ En el caso del teorema, se utiliza para determinar los\\ 2 casos correspondientes y encontrar la contradicción.\end{tabular}                                                                                                                                                                                                                                                                                                                                                                       \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Teorema 107\\ \\ En el teorema 107, \\ ¿por qué se aplica \\ el axioma de regularidad \\ a $A\cup \bigcup A$?\end{tabular}}                                                         & \begin{tabular}[c]{@{}l@{}}El argumento de la prueba toma una demostración \\ por contrapuesta.  Además, nótese que en el argumento \\ de la prueba se utiliza la segunda definición del \\ 
+			axioma de regularidad, ya que es evidente que \\ estamos trabajando con un conjunto.  El axioma  se utiliza como \\ 
+			 $(A\cup \bigcup A)\neq 0 \implies (\exists C)[C\in (A\cup \bigcup A)\wedge ((A\cup \bigcup A)\cap C=0)]$\\
+		Lo que se busca, es mostrar que por varios \\ teoremas los conjuntos que conforman $A\cup \bigcup A$\\ no son vacíos; lo que provoca una contradicción \\ con el axioma de regularidad. \end{tabular} \\ \hline
+	\end{tabular} %
+}
+\end{table}
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

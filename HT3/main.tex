@@ -32,7 +32,8 @@
 \end{problema}
 \begin{sol}
 	Considerando $\mathcal{P}\varnothing =\{\varnothing\}$. 
-	$$\implies \mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\}\}\implies \mathcal{P}\mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\},\{\{\varnothing\}\}, \{\varnothing,\{\varnothing\}\} \} $$
+	$$\implies \mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\}\}\implies \mathcal{P}\mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\},\{\{\varnothing\}\}, \{\varnothing,\{\varnothing\}\} \}. $$
+	Supóngase que $\exists B\neq 0 \ni B\in \mathcal{P}\mathcal{P}\mathcal{P}\varnothing\implies  B\subseteq\mathcal{P}\mathcal{P}\varnothing \ (x\in B\implies x\in \{\varnothing,\{\varnothing\}\}\implies x=\varnothing \vee x=\{\varnothing\})\implies B=\{\varnothing\}\vee B=\{\{\varnothing\}\}\vee B=\{\varnothing,\{\varnothing\}\}$. Por lo tanto, $\mathcal{P}\mathcal{P}\mathcal{P}\varnothing= \{\varnothing,\{\varnothing\},\{\{\varnothing\}\}, \{\varnothing,\{\varnothing\}\} \}$. 
 \end{sol}
 
 %------
@@ -44,9 +45,9 @@
 		\begin{proof}
 			Previamente, conocíamos que $\varnothing \subseteq A$. $\therefore$ Por teorema de caracterización, $$\varnothing \subseteq A \implies \varnothing\in \mathcal{P}A.$$		\end{proof}
 		
-		\item[99.] $\mathcal{P}\mathcal{P}\varnothing=\{\varnothing,\{\varnothing\}\}$.
+		\item[90.] $\mathcal{P}\mathcal{P}\varnothing=\{\varnothing,\{\varnothing\}\}$.
 		\begin{proof}
-			Se cumple trivialmente por la definición, ver el \textbf{Problema 1.2}. 
+			Supóngase $\exists B\neq 0\ni B\in \mathcal{P}\mathcal{P}\varnothing\iff B\subseteq \mathcal{P}\varnothing \ (x\in B\implies x\in \{\varnothing\}\implies x\in \varnothing)\implies B=\{\varnothing\}$. Por lo tanto, $\mathcal{P}\mathcal{P}\varnothing=\{\varnothing,\{\varnothing\}\}$.
 		\end{proof}
 	\end{enumerate}
 \end{problema}
@@ -57,7 +58,8 @@
 	Demostrar el teorema 93. $\mathcal{P}(A\cap B)=(\mathcal{P} A)\cap (\mathcal{P}B)$. 
 \end{problema}
 \begin{proof}
-	$C\in \mathcal{P}(A\cap B) \iff C\subseteq (A\cap B)\iff C\subseteq  A \wedge C\subseteq  B \iff C\in   \mathcal{P}A \wedge C\in  \mathcal{P} B\iff  C\in [(\mathcal{P} A)\cap (\mathcal{P}B)]. \therefore \ \mathcal{P}(A\cap B)=(\mathcal{P} A)\cap (\mathcal{P}B)$
+	Sean $A,B$ y $C$ conjuntos. Supóngase
+	$C\in \mathcal{P}(A\cap B) \iff C\subseteq (A\cap B)\ (x\in C\implies x\in A\wedge x\in B) \iff C\subseteq  A \wedge C\subseteq  B \iff C\in   \mathcal{P}A \wedge C\in  \mathcal{P} B\iff  C\in [(\mathcal{P} A)\cap (\mathcal{P}B)]. \therefore \ \mathcal{P}(A\cap B)=(\mathcal{P} A)\cap (\mathcal{P}B)$.
 \end{proof}
 
 %------
@@ -66,10 +68,10 @@
 \end{problema}
 \begin{proof}
 	
-	Tenemos dos casos: 
+	Sean $A,B$ y $C$ conjuntos, tal que $C\in \mathcal{P}(A\sim B)$ 
 	\begin{enumerate}
-		\item $A\sim B$ no es vacío. $C\in \mathcal{P}(A \sim B) \iff C\subseteq (A\sim B)\iff C\subseteq A \wedge C\not\subseteq B\iff C\in \mathcal{P}A \wedge C\not\in \mathcal{P}B\implies C\in [(\mathcal{P}A) \sim (\mathcal{P} B)]$.
-		\item $A\sim B$ es vacío. $\implies \mathcal{P}(A\sim B)= \{\varnothing\}$.
+		\item $A\sim B$ no es vacío. $C\in \mathcal{P}(A \sim B) \implies C\subseteq (A\sim B)\ (x\in C\implies x\in A \wedge x\not\in B\implies [\forall x\in C\implies x\in A]\wedge [x\in C\implies x\not\in B])\implies C\subseteq A \wedge C\not\subseteq B\implies C\in \mathcal{P}A \wedge C\not\in \mathcal{P}B\implies C\in [(\mathcal{P}A) \sim (\mathcal{P} B)]\implies \mathcal{P}(A \sim B)\subseteq ((\mathcal{P}A)\sim(\mathcal{P}B) )$.
+		\item $A\sim B$ es vacío. $\implies C\in \mathcal{P}(A\sim B)= C\in \{\varnothing\}\implies C=0\implies \mathcal{P}(A\sim B)\subseteq \{\varnothing\}$.
 	\end{enumerate}
 	
 	 Por lo tanto, $\mathcal{P}(A \sim B)\subseteq ((\mathcal{P}A)\sim(\mathcal{P}B) )\cup \{\varnothing\}$.
@@ -111,13 +113,13 @@
 	 Demostrar los teoremas 96 y 97 .\begin{enumerate}
 	 	\item[96.] $x\in A\times B\iff (\exists y)(\exists z)(y\in A\wedge z\in B\wedge x=\langle y, z\rangle)$.
 	 	\begin{proof}
-	 		Inmediatamente por el teorema de existencia. Sea $A\times B = A\times B$, entonces 
+	 		Sean $A,B$ y $C$ conjuntos. Inmediatamente por el teorema de existencia. Sea $A\times B = A\times B$, entonces 
 	 		$\forall x\in A\times B\iff (\exists y)(\exists z)(y\in A\wedge z\in B\wedge x=\langle y, z\rangle)$.
 	 	\end{proof}
 	 	
 	 	\item[97.] $\langle x,y\rangle \in A\times B \iff x\in A \wedge y\in B$.
 	 	\begin{proof}
-	 		Inmediatamente por la definición. Sea $A\times B=\{\langle x,y\rangle: x\in A\wedge y\in B\}$. Por lo tanto, $\langle x,y\rangle \in A\times B \iff x\in A \wedge y\in B$.
+	 		Sean $A,B$ y $C$ conjuntos. Inmediatamente por la definición. Sea $A\times B=\{\langle x,y\rangle: x\in A\wedge y\in B\}$. Por lo tanto, $\langle x,y\rangle \in A\times B \iff x\in A \wedge y\in B$.
 	 	\end{proof}
 	 	
 	 \end{enumerate}
@@ -129,7 +131,7 @@
 	Demostrar el teorema 101. $B\subseteq C\implies A\times B\subseteq A\times C$.
 \end{problema}
 \begin{proof}
-	Por hipótesis, $B\subseteq C\iff (y\in B\implies y\in C)$. Entonces, supóngase que $\langle x,y\rangle \in A\times B\implies x\in A\wedge y\in B\implies x\in A\wedge y\in C\implies\langle x,y\rangle \in A\times C $. $\therefore A\times B\subseteq A\times C$. 
+	Sean $A,B$ y $C$ conjuntos. Por hipótesis, $B\subseteq C\iff (y\in B\implies y\in C)$. Entonces, supóngase que $\langle x,y\rangle \in A\times B\implies x\in A\wedge y\in B\implies x\in A\wedge y\in C\implies\langle x,y\rangle \in A\times C $. $\therefore A\times B\subseteq A\times C$. 
 \end{proof}
 
 %------
@@ -139,14 +141,14 @@
 	\begin{enumerate}
 		\item[103.] $A\times (B\cup C)=(A\times B)\cup (A\times C)$.
 		\begin{proof}
-			Supóngase $\langle x, y\rangle \in \left[A\times (B\cup C)\right]\iff x\in A\wedge [y\in (B\cup C)]\iff x\in A \wedge (y\in B\vee y\in C)\iff (x\in A\wedge y\in B)\vee(x\in A\wedge y\in C)\iff \langle x, y \rangle \in (A\times B)\cup (A\times C)$. $\therefore A\times (B\cup C)=(A\times B)\cup (A\times C)$.  
+			Sean $A,B$ y $C$ conjuntos. Supóngase $\langle x, y\rangle \in \left[A\times (B\cup C)\right]\iff x\in A\wedge [y\in (B\cup C)]\iff x\in A \wedge (y\in B\vee y\in C)\iff (x\in A\wedge y\in B)\vee(x\in A\wedge y\in C)\iff \langle x, y \rangle \in (A\times B)\cup (A\times C)$. $\therefore A\times (B\cup C)=(A\times B)\cup (A\times C)$.  
 		\end{proof}
 		\item[104.] $A\times (B \sim C)= (A\times B)\sim (A\times C)$.
 			\begin{cajita}
 			Nótese que $\langle x,y \rangle \not\in A\times B \iff x\not\in A \vee x\not\in B  $.
 		\end{cajita}
 	\begin{proof}
-			$\langle x, y\rangle \in A\times (B\sim C)\iff x\in A \wedge \left[y\in (B\sim C)\right]\iff x\in A \wedge [(y\in B)\wedge (y\not\in C)]\iff [(x\in A) \wedge (y\in B)] \wedge  ( y\not\in C)\iff \langle x, y\rangle \in (A\times B)\sim (A\times C) $. 
+			Sean $A,B$ y $C$ conjuntos. $\langle x, y\rangle \in A\times (B\sim C)\iff x\in A \wedge \left[y\in (B\sim C)\right]\iff x\in A \wedge [(y\in B)\wedge (y\not\in C)]\iff [(x\in A) \wedge (y\in B)] \wedge  ( y\not\in C)\iff \langle x, y\rangle \in (A\times B)\sim (A\times C) $. 
 	\end{proof}
 	\end{enumerate}
 \end{problema}
