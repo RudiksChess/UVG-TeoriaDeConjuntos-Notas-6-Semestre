@@ -1,0 +1,54 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+\textbf{Instrucciones:} Del libro de Set Theory de Charles Pinter, resuelva los ejercicios 3, 6, 8, 9 de la sección 1.5 del Capítulo 1.
+
+\section{Problemas}
+\begin{problema}(Ejercicio 3)
+	Probar el teorema 1.38. Sean $G$ y $H$ los gráficos. Si $\operatorname{ran} H \subseteq  \operatorname{dom} G$ entonces $\operatorname{dom}(G\circ H)= \operatorname{dom} H$.
+\end{problema}
+
+\begin{proof}
+	Sean $G$ y $H$ gráficas. 
+	
+	\begin{enumerate}
+		\item[$(\implies)$] Supóngase $x\in \operatorname{dom}(G\circ H) \implies \exists y \ni (x,y)\in G\circ H\implies \exists z \wedge \exists y \ni (x,z)\in H\wedge (z,y)\in G\implies \operatorname{dom}H\wedge \operatorname{ran}G\implies \operatorname{dom}H$. Por lo tanto, $\operatorname{dom}(G\circ H)\subseteq \operatorname{dom} H$
+		\item[$(\impliedby)$]  Supóngase $x\in \operatorname{dom} H\implies \exists u \ni (x,u) \in H$. Por hipótesis, $(u\in \operatorname{ran} H\implies u\in \operatorname{dom} G) \iff (\exists v \ni (v,u)\in H\implies \exists w  \ni (u,w)\in G)$,   entonces tenemos $\exists u \wedge \exists w \ni (x,u)\in H \wedge (u,w)\in G\iff \exists w\ni (x,w)\in G\circ H\iff x\in \operatorname{dom}(G\circ H)\implies (x\in \operatorname{H}\implies x\in \operatorname{dom}(G\circ H))\implies\operatorname{dom}H \subseteq  \operatorname{dom}(G\circ H)$.
+	\end{enumerate}
+Por lo tanto, $\operatorname{dom}(G\circ H)= \operatorname{dom} H$.
+\end{proof}
+
+\begin{problema}(Ejercicio 6)
+	Si $G, H, J$, y $K$  son gráficos, probar: 
+	\begin{enumerate}
+		\item Si $G \subseteq H$ y $J \subseteq K$, entonces $G \circ J \subseteq H \circ K$,
+		\item $G \subseteq H$ si y solo si $G^{-1} \subseteq H^{-1}$.
+	\end{enumerate}
+\end{problema}
+
+\begin{problema}(Ejercicio 8)
+	Sean $G$ y $H$ gráficos, probar:
+	\item  Si $G \subseteq A \times B$, entonces $G^{-1} \subseteq B \times A$.
+	\item  Si $G \subseteq A \times B$ y $H \subseteq B \times C$, entonces $H \circ G \subseteq A \times C$.
+\end{problema}
+
+\begin{problema}(Ejercicio 9)
+	Si $G$ y $H$ son gráficos, probar: 
+	\begin{enumerate}
+		\item $\operatorname{dom}(G \cup H)=(\operatorname{dom} G) \cup(\operatorname{dom} H)$.
+		\item $\operatorname{ran}(G \cup H)=(\operatorname{ran} G) \cup(\operatorname{ran} H)$.
+		\item $\operatorname{dom} G-\operatorname{dom} H \subseteq \operatorname{dom}(G-H)$.
+		\item $\operatorname{ran} G-\operatorname{ran} H \subseteq \operatorname{ran}(G-H)$.
+	\end{enumerate}
+
+\end{problema}
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

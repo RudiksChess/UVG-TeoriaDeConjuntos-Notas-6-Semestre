@@ -13,7 +13,7 @@ $\cup\{A, B\}=A \cup B$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A, B$ y $C$ conjuntos. Supóngase que $x\in \cup\{A,B\}\iff (\exists C)(x\in C\wedge C\in \{A,B\})\iff [x\in C\wedge (C=A \vee C= B)]\iff [(x\in C\wedge C=A)\vee (x\in C\wedge C=B)]\iff x\in A\vee x\in B \iff x\in A\cup B$. Por lo tanto, $\cup\{A, B\}=A \cup B$. 
 \end{dem}
 %------------
 \begin{problema}
@@ -21,7 +21,7 @@ $\cup\{A, B\}=A \cup B$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A, B$ y $C$ conjuntos. Supóngase que $x\in \cup(A\cup B)\iff (\exists C)(x\in C\wedge C\in A\cup B)\iff [x\in C\wedge (C\in A \vee C\in B)]\iff [(x\in C\wedge C\in A)\vee (x\in C\wedge C\in B)]\iff x\in (\cup A)\cup (\cup B)$. Por lo tanto, $\cup(A \cup B)=(\cup A) \cup(\cup B)$.
 \end{dem}
 %------------
 \begin{problema}
@@ -29,7 +29,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+		Sean $A, B$ y $C$ conjuntos. Por hipótesis, $A\subseteq B\implies (C\in A \implies C\in B)$. Supóngase $x\in \cup A\implies (\exists C)(x\in C\wedge C\in A)\implies (x\in C\wedge C\in B)\implies x\in \cup B$. Por lo tanto, $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$.
 \end{dem}
 %------------
 \begin{problema}
@@ -37,7 +37,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sea $B$ un conjunto. Supóngase $c\in \cap \langle x,y\rangle \iff (\forall B)(B\in \langle x,y\rangle \implies c\in B)\wedge (\exists B)(B\in \langle x,y\rangle )\iff (\forall B)(B\in \langle x,y\rangle \implies c\in B)\wedge(B\in \{\{x\},\{x,y\}\})\iff (\forall B)(B\in \langle x,y\rangle \implies c\in B)\wedge (B=\{x\}\vee B=\{x,y\})\iff (c\in B\wedge B=\{x\})\vee (c\in B\wedge B=\{x,y\})\iff c\in \{x\}\wedge c\in \{x,y\}$. Por lo tanto, $\cap\langle x, y\rangle=\{x\}$.
 \end{dem}
 %------------
 \begin{problema}
@@ -45,15 +45,14 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A$ y $B$ conjuntos. Supóngase $x\in A$ y por hipótesis $A\in B$ y por la definición de la unión de un conjunto $\cup B$. 
 \end{dem}
 %------------
 \begin{problema}
 	$\cup\langle x, y\rangle=\{x, y\}$
 \end{problema}
-
 \begin{dem}
-	c
+	Sea $B$ un conjunto. Supóngase $c\in \cup \langle x,y\rangle \iff (\exists B)(c\in B\wedge B\in  \langle x,y\rangle)\iff (c\in B)\wedge (B\in \{\{x\},\{x,y\}\})\iff (c\in B)\wedge (B=\{x\}\vee B=\{x,y\})\iff (c\in \{x\})\vee (x\in \{x,y\})$. Por lo tanto, $\cup\langle x, y\rangle=\{x, y\}$. 
 \end{dem}
 %------------
 \begin{problema}
@@ -61,7 +60,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A,B$ y $C$. Supóngase $x\in \cup \cup \langle A,B \rangle \iff (\exists C)(x\in C\wedge C\in \cup \langle A,B\rangle )\iff x\in C\wedge \underbrace{C\in \{A,B\}}_{\text{Problema 1.6}}\iff x\in C \wedge (C=A\vee C=B)\iff x\in A\vee x\in B\iff x\in A\cup B$. Por lo tanto, $\cup \cup \langle A, B\rangle=A \cup B$.
 \end{dem}
 %------------
 \begin{problema}
@@ -69,7 +68,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A$ y $B$ conjuntos. Supóngase $x\in \cap \{A\}\iff (\forall B)(B\in \{A\}\implies x\in B)\wedge (\exists B)(B\in \{A\})\iff x\in B\wedge B=A\iff x\in A$. 
 \end{dem}
 %------------
 \begin{problema}
@@ -77,7 +76,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A$ y $B$ conjuntos. Supóngase $x\in \cap \{A,B\}\iff (\forall C)(C\in \{A,B\}\implies x\in C)\wedge (\exists C)(C\in \{A,B\})\iff (\forall C)(C\in \{A,B\}\implies x\in C)\wedge (C=A\vee C=B)\iff x\in A \wedge x\in B\iff x\in A\cup B$. Por lo tanto, $\cap\{A, B\}=A \cap B$. 
 \end{dem}
 %------------
 \begin{problema}
@@ -85,7 +84,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A,B$ y $C$ conjuntos. Supóngase $c\in\cap \cap \langle A, B\rangle \iff (\forall C)(C\in\cap \langle A, B\rangle \implies x\in  \underbrace{\cap \langle A, B\rangle}_{\text{Problema 1.4}})\wedge (\exists C)(C\in \underbrace{\cap \langle A, B\rangle}_{\text{Problema 1.4}} ) \iff (\forall C)(C\in\cap \langle A, B\rangle \implies x\in \{A\})\wedge (\exists C)(C\in \{A\} )\iff (\forall C)(C\in\cap \langle A, B\rangle \implies x\in \{A\})\wedge (C=A )\iff x\in A$. Por lo tanto, $\cap \cap \langle A, B\rangle=A$.
 \end{dem}
 %------------
 \begin{problema}
@@ -93,15 +92,15 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A$ y $B$ conjuntos. Supóngase que $x\in \cap A\iff (\forall B)(B\in A \implies x\in B)\wedge (\exists B)(B\in A)\iff x\in B\wedge B\in A\iff \cup A$. Por lo tanto, $\cap A \subseteq \cup A$.
 \end{dem}
 %------------
 \begin{problema}
-	Si $\emptyset \in A$ entonces $\cap A=\emptyset$.
+	Si $\varnothing\in A$ entonces $\cap A=\varnothing$. 
 \end{problema}
 
 \begin{dem}
-	c
+	Sean $A$ y $B$ conjuntos. Supóngase que $x\in \cap A\iff (\varnothing\in A \implies x \in\varnothing)$. Por lo tanto, $\cap A=\varnothing$.
 \end{dem}
 %------------
 
