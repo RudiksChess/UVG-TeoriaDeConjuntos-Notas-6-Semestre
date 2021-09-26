@@ -52,7 +52,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 	$\cup\langle x, y\rangle=\{x, y\}$
 \end{problema}
 \begin{dem}
-	Sea $B$ un conjunto. Supóngase $c\in \cup \langle x,y\rangle \iff (\exists B)(c\in B\wedge B\in  \langle x,y\rangle)\iff (c\in B)\wedge (B\in \{\{x\},\{x,y\}\})\iff (c\in B)\wedge (B=\{x\}\vee B=\{x,y\})\iff (c\in \{x\})\vee (x\in \{x,y\})$. Por lo tanto, $\cup\langle x, y\rangle=\{x, y\}$. 
+	Sea $B$ un conjunto. Supóngase $c\in \cup \langle x,y\rangle \iff (\exists B)(c\in B\wedge B\in  \langle x,y\rangle)\iff (c\in B)\wedge (B\in \{\{x\},\{x,y\}\})\iff (c\in B)\wedge (B=\{x\}\vee B=\{x,y\})\iff (c\in \{x\})\wedge (x\in \{x,y\})$. Por lo tanto, $\cup\langle x, y\rangle=\{x, y\}$. 
 \end{dem}
 %------------
 \begin{problema}
@@ -92,7 +92,7 @@ $(A \subseteq B) \Rightarrow(\cup A \subseteq \cup B)$
 \end{problema}
 
 \begin{dem}
-	Sean $A$ y $B$ conjuntos. Supóngase que $x\in \cap A\iff (\forall B)(B\in A \implies x\in B)\wedge (\exists B)(B\in A)\iff x\in B\wedge B\in A\iff \cup A$. Por lo tanto, $\cap A \subseteq \cup A$.
+	Sean $A$ y $B$ conjuntos. Supóngase que $x\in \cap A\implies (\forall B)(B\in A \implies x\in B)\wedge (\exists B)(B\in A)\implies x\in B\wedge B\in A\implies \cup A$. Por lo tanto, $\cap A \subseteq \cup A$.
 \end{dem}
 %------------
 \begin{problema}

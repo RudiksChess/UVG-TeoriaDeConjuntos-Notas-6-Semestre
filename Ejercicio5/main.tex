@@ -1,0 +1,59 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+
+\begin{problema}
+	Si $A$ es un conjunto entonces existe una función biyectiva entre $2^A$ y $\mathcal{P}(A)$. 
+\end{problema}
+\begin{cajita}
+	\begin{definicion}(Función característica)
+		Sea $A$ un conjunto  y $B\subseteq A$ entonces se define la función característica de $B$ de la siguiente manera: 
+		$$C_B:A\to 2\ni $$
+		$$C_B(x)=\begin{cases}
+			0, & x \in B\\
+			1, & x \not\in B
+		\end{cases}, \quad x\in A.$$
+	\end{definicion}
+\end{cajita}
+
+\begin{proof}
+Sea $\gamma: \mathcal{P}(A)\to 2^A$ y supóngase $B\in \mathcal{P}(A)$,  tal que
+
+ $$\gamma(B)=\underbrace{\{C_B\}_{B\in A}}_{\text{función}\atop \text{característica}}, \quad \forall B\in \mathcal{P}(A).$$
+
+
+ Nótese que $\{C_B\}_{B\in A}  \subseteq 2^A$. Comprobaremos que $\gamma$ es una función y posteriormente que es una función biyectiva:
+\begin{enumerate}
+	\item Función, tal que por el teorema de caracterización para funciones: \begin{enumerate}
+		\item $B\in \mathcal{P}(A) \ni \gamma(B)=\{C_B\}_{B\in A}$. 
+		\item Inyectividad en el inciso \textbf{2.a}. 
+	\end{enumerate}
+	\item Biyectividad, tal que 
+	\begin{enumerate}
+		\item Inyectividad. Supóngase $X$ y $Y\in \mathcal{P}(A)\ni$
+		\begin{align*}
+			 \gamma (X) &=\gamma(Y)\\
+			 \{C_X\}_{X\in A}&=\{C_Y\}_{Y\in A}\\
+			 \{x\in A\ni C_X(x)=0\} &=\{x\in A\ni C_Y(x)=0\}\\
+			 X&=Y
+		\end{align*}
+	Por lo tanto, $\gamma$ es inyectiva. 
+		\item Sobreyectividad. Supóngase que tenemos una función $f\in 2^A$ y ahora dígase que $f^{-1}(0)=B\implies f=\{C_B\}_{B\in A}=\gamma(B)$. Por lo tanto, $\gamma$ es sobreyectiva. 
+	\end{enumerate}
+Por lo tanto, $\gamma$ es función biyectiva. 
+\end{enumerate}	
+Entonces, $2^A \subseteq \{C_B\}_{B\in A} $ tal que $2^A = \{C_B\}_{B\in A} $. Por lo tanto, existe una función $\gamma$ biyectiva entre $2^A$ y $\mathcal{P}(A)$. 
+\end{proof}
+
+
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

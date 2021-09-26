@@ -1,0 +1,67 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+\section{Problema}
+
+\begin{problema}
+	Sea $f:A\to B$ una función y $G$ la relación definida por $f$. Se definen entonces las siguientes funciones:
+	\begin{enumerate}
+		\item $r:A\to A/G\ni r(x)=[x]$
+		\item $s:A/G\to\bar{f}(A)\ni s([x])=f(x), \forall x\in A$
+		\item $t:\bar{f}(A)\to B\ni t(y)=y,\forall y\in A$
+	\end{enumerate}
+\begin{cajita}
+	$$\bar{f}(A)=\{y\in B | \exists x \in A \ni y=f(x)\}$$
+\end{cajita}
+	 Demostrar:
+	\begin{enumerate}
+		\item $r$ es sobreyectiva. 
+			\begin{dem}
+				Por la definición de sobreyectividad, $$\forall [x]\in A/G, \exists x \in A \ni r(x)=[x].$$
+			\end{dem}
+		\item $s$ biyectiva.
+			\begin{dem}
+				A probar: $s$ es sobreyectiva e inyectiva. 
+				\begin{enumerate}
+					\item Sobreyectiva.  Por la definición, 
+					$$\forall f(x)\in \bar{f}(A),\ \exists x\in A, \ \exists [x]\in A/G\ni s([x])=f(x).$$
+					\item Inyectiva. Sean $x,y\in A\ni$
+					\begin{align*}
+						s([x]) &= s([y])\\
+						f(x) &= f(y)
+						\intertext{Como $(x,y)\in G$}
+						[x] &= [y].
+					\end{align*}
+				\end{enumerate}
+			Por lo tanto, $s$ es biyectiva. 
+			\end{dem}
+		\item $t$ inyectiva.
+			\begin{dem}
+				Sean $x,y\in A\ni$ 
+				\begin{align*}
+					t(x)&=t(y)\\
+					x&=y
+				\end{align*}
+			Por lo tanto, $t$ es inyectiva. 
+					\end{dem}
+		\item $f=t\circ s\circ r$
+			\begin{dem}
+				Sea $x\in A\ni $
+				$$t\left(s\left(r(x)\right)\right)\implies t\left(s\left(\left[x\right]\right)\right)\implies t(f(x))\implies f(x).$$
+				Entonces, $$\left[t\circ s\circ r\right](x)=f(x),\forall x\in A $$
+				Por el teorema 2.5 de Pinter podemos concluir que 
+				$$\left[t\circ s\circ r\right]=f.$$
+			\end{dem}
+	\end{enumerate}
+\end{problema}
+	
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

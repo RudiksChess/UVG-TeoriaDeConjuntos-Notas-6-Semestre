@@ -1,0 +1,274 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+\section{Sección}
+\textbf{Instrucciones: }  Resuelva los siguientes problemas: 
+\begin{problema}
+	Sea $A=\mathbb{Z}$, si se define una relación $\approx$ sobre $A$ tal que: $x \approx y$ si $x-y \in \mathbb{Z}$. Determine si la relación $\approx$ es: reflexiva, simétrica, transitiva, antisimétrica, de orden parcial y/o de equivalencia. Si la relación es de equivalencia construya el conjunto cociente.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+
+\begin{problema}
+	Dado X un conjunto no vacío, muestre que existe una única relación de equivalencia $\mathrm{R}$ sobre X, tal que el conjunto cociente es un conjunto unitario.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+
+\begin{problema}
+	 Demuestre que si $R$ y $S$ son relaciones de equivalencia la intersección entre ellas también es relación de equivalencia. ¿Es la unión relación de equivalencia?
+	 \begin{dem}
+	 	content...
+	 \end{dem}
+\end{problema}
+
+\begin{problema}
+	Sea $f: X \rightarrow Y$ una función sobreyectiva, con $X$ un conjunto no vacío. Defina la relación $E=\{(a, b) \mid \quad f(a)=f(b)\}$
+	\begin{enumerate}
+		\item Muestre que $E$ es una relación de equivalencia.
+		\begin{dem}
+			content...
+		\end{dem}
+		\item Demuestre que los conjuntos $Y$ y $E / X$ son equipotentes (i.e. existe una función biyectiva entre $Y$ y $E / X$).
+		\begin{dem}
+			content...
+		\end{dem}
+	\end{enumerate}
+	
+\end{problema}
+
+\section{Sección}
+\textbf{Instrucciones: }  Resuelva los siguientes ejercicios del libro de Pinter:
+
+\subsection{Capítulo 3}
+\subsubsection{Ejercicios 3.2}
+\begin{problema}(Problema 2)
+	Let $G$ be a relation in $A$; prove each of the following:
+	\begin{enumerate}
+		\item $G$ is irreflexive if and only if $G \cap I=\varnothing$.
+		\begin{dem}
+			Sea
+			\begin{enumerate}
+				\item[($\implies$)] Supóngase $G$ no es reflexiva, $\forall x\in A \ni (x,x)\not\in G$. Sea 
+				\begin{align*}
+					(x,y)\in G\cap I &\implies (x,y)\in G\wedge \underbrace{(x,y)}_{x=y}\in I \\
+					&\implies \underbrace{(x,x)\in G}_{(\to\gets)} \wedge (x,x)\in I
+				\end{align*}
+				$\therefore \forall (x,y)\not\in G\cap I\implies  G\cap I = \varnothing$.
+				\item[($\impliedby$)] Supóngase $G\cap I=\varnothing$. Sea 
+				$(x,y)\in G$, pero como $G\cap I=\varnothing\implies I\not\subseteq G\implies \forall x\in A\ni (x,x)\not\in G\implies G$ no es reflexiva.  
+			\end{enumerate}
+		$\therefore G \cap I=\varnothing$.
+		\end{dem}
+		\item $G$ is asymmetric if and only if $G \cap G^{-1}=\varnothing$.
+		\begin{dem}
+			Sea
+			\begin{enumerate}
+				\item[($\implies$)] Supóngase $G$ es asimétrica, tal que 
+				\begin{align*}
+					(x,y)\in G\cap G^{-1} &\implies \underbrace{(x,y)\in G}_{\stackrel{\text{definición}}{\text{asimetría}}}\wedge (x,y)\in G^{-1}\\
+					&\implies (y,x)\not\in G \wedge (y,x)\in G (\to\gets ) 
+				\end{align*}
+			$\therefore (x,y)\not\in G\cap G^{-1}. \therefore G\cap G^{-1}=\varnothing$. 
+				
+				\item[($\impliedby$)] Supóngase $G\cap G^{-1}=\varnothing$, tal que
+				\begin{align*}
+					(x,y)\in G \wedge (y,x)\in G &\implies (x,y)\in G \wedge (x,y)\in G^{-1}\\
+					&\implies (x,y)\in G\cap G^{-1}=\varnothing\\
+					&\implies (y,x)\not\in G.
+				\end{align*}
+			$\therefore G$ es asimétrica.
+			\end{enumerate}
+			$\therefore G \cap G^{-1}=\varnothing$.
+	
+		\end{dem}
+		\item $G$ is intransitive if and only if $(G \circ G) \cap G=\varnothing$.
+			\begin{dem}
+			Sea
+			\begin{enumerate}
+				\item[($\implies$)] Sea $G$ intransitiva, tal que 
+				\begin{align*}
+					(x,y)\in (G\circ G)\cap G &\implies (x,y)\in (G\circ G) \wedge (x,y)\in G\\
+					&\implies \underbrace{\left[\exists z \ni (x,z)\in G \wedge (z,y)\in G \right]}_{\stackrel{\text{definición}}{\text{intransitiva}}}\wedge (x,y)\in G\\
+					&\implies (x,y)\not\in G \wedge (x,y)\in G (\to\gets)
+				\end{align*}
+			$\therefore (x,y)\not\in (G \circ G) \cap G \implies (G \circ G) \cap G =\varnothing$. 
+				
+				\item[($\impliedby$)] Sea $(G \circ G) \cap G=\varnothing$ tal que, 
+				
+				\begin{align*}
+					(x,y)\in G \wedge (x,y)\in G &\implies  \left[\exists z\ni (x,z)\in G\wedge (z,y)\in G\right]\wedge (x,y)\in G\\
+					&\implies (x,y)\in (G\circ G)\wedge (x,y)\in G\\
+					&\implies (x,y)\in (G \circ G) \cap G =\varnothing\\
+					&\implies (x,y)\not\in G
+				\end{align*}
+				$\therefore G$ es intransitiva. 
+			\end{enumerate}
+			$\therefore (G \circ G) \cap G=\varnothing$.
+			
+		\end{dem}
+	\end{enumerate}
+\end{problema}
+
+\begin{problema}(Problema 3)
+	Show that if is an equivalence relation in $A$, then $G\circ G=G$.
+	\begin{dem}
+		Supóngase que tenemos una relación de equivalencia en $A$ (i.e. reflexivo, simétrico y transitivo) tal que, 
+		\begin{enumerate}
+			\item[($\implies$)] Sea \begin{align*}
+				(x,y)\in G\circ G &\implies \exists z\ni \underbrace{(x,z)\in G \wedge (z,y)\in G}_{\stackrel{\text{definición}}{\text{transitividad}}}\\
+				&\implies (x,y)\in G
+			\end{align*}
+		$\therefore G\circ G\subseteq G$. 
+			\item[($\impliedby$)] Sea 
+			\begin{align*}
+				(x,y)\in G &\implies \underbrace{(x,x)\in G} _{\stackrel{\text{definición}}{\text{reflexividad}}} \wedge (x,y)\in G\\
+				&\implies \exists z=x\ni (x,z)\in G\wedge (z,y)\in G\\
+				&\implies (x,y)\in G\circ G
+			\end{align*}
+		$\therefore G\subseteq G\circ G$. 
+		\end{enumerate}
+		$\therefore G\circ G=G$. 
+	\end{dem}
+\end{problema}
+\begin{problema}(Problema 7)
+	Let $G$ and $H$ be relations in $A$; suppose that $G$ is reflexive and $H$ is reflexive and transitive. Show that $G \subseteq H$ if and only if $G \circ H=H$. (In particular, this holds if $G$ and $H$ are equivalence relations.)
+	\begin{dem}
+		Sea $G$ reflexiva y $H$ reflexiva y transitiva. 
+		\begin{enumerate}
+			\item[($\implies$)] Sea $G\subseteq H$, tal que 
+			\begin{enumerate}
+				\item[($\implies$)] Sea
+				\begin{align*}
+					(x,y)\in G\circ H &\implies \exists z\ni \underbrace{(x,z)\in G}_{\text{hipótesis}}\wedge (z,y)\in H \\
+					&\implies \exists z\ni \underbrace{(x,z)\in H\wedge (z,y)\in H}_{\stackrel{\text{definición}}{\text{transitividad}}}\\
+					&\implies (x,y)\in H 
+				\end{align*}
+				$\therefore G\circ H\subseteq H$.
+				
+				\item[($\impliedby$)]  Sea
+				\begin{align*}
+					(x,y)\in H &\implies \underbrace{(x,x)\in G}_{\stackrel{\text{definición}}{\text{reflexividad}}}  \wedge(x,y)\in H \\
+					&\implies \exists z=x\ni (x,z)\in G\wedge (z,y)\in H\\
+					&\implies (x,y)\in G\circ H
+				\end{align*}
+				$\therefore H\subseteq G\circ H$. 
+			\end{enumerate}
+			$\therefore G\circ H=H$.  
+			\item[($\impliedby$)]  Sea $G\circ H=H$, tal que 
+			\begin{align*}
+				(x,y)\in G &\implies (x,y)\in G  \wedge \underbrace{(y,y)\in H}_{\stackrel{\text{definición}}{\text{reflexividad}}} \\
+				&\implies \exists z=y \ni (x,z)\in G \wedge (z,y)\in H\\
+				&\implies \underbrace{(x,y)\in G\circ H }_{\text{hipótesis}}\\
+				&\implies (x,y)\in H	
+					\end{align*}
+			$\therefore G\subseteq H$. 
+		\end{enumerate}
+	\end{dem}
+\end{problema}
+
+%---------------------------------------
+\subsubsection{Ejercicios 3.3}
+\begin{problema}(Problema 10)
+	Suppose $f: A \rightarrow B$ is an injective function, and $\left\{A_{i}\right\}_{i \in I}$ is a partition of $A$. Prove that $\left\{\bar{f}\left(\mathrm{~A}_{\mathrm{i}}\right)\right\}_{i \in I}$ is a partition of $\bar{f}(\mathrm{~A})$.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+
+%---------------------------------------
+\subsubsection{Ejercicios 3.4}
+\begin{problema}(Problema 3)
+	Let $f: A \rightarrow B$ be a function and let $G$ be an equivalence relation in $B$. Prove that $\breve{f}(\mathrm{G})$ is an equivalence relation in $A$.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+%---------------------------------------
+\subsubsection{Ejercicios 3.5}
+\begin{problema}(Problema 3)
+	Let $f: A \rightarrow B$ be a function and let $G$ be an equivalence relation in $B$. Prove that $\breve{f}(\mathrm{G})$ is an equivalence relation in $A$.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+
+%---------------------------------------
+\subsection{Capítulo 4}
+\subsubsection{Ejercicios 4.2}
+\begin{problema}(Problema 2)
+	Let $f: A \rightarrow B$ be an increasing function. If $C$ is a chain of $A$, prove that $\bar{f}(C)$ is a chain of $B$.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+%---------------------------------------
+\subsubsection{Ejercicios 4.3}
+\begin{problema}(Problema 10)
+	Let $A$ and $B$ be partially ordered classes, and let $f: A \rightarrow B$ be an isomorphism. Prove each of the following:
+	\begin{enumerate}
+		\item  $a$ is a maximal element of $A$ iff $f(a)$ is a maximal element of $B$.
+		\begin{dem}
+			content...
+		\end{dem}
+		\item $a$ is the greatest element of $A$ iff $f(a)$ is the greatest element of $B$.
+		\begin{dem}
+			content...
+		\end{dem}
+		\item Suppose $C \subseteq A ; x$ is an upper bound of $C$ iff $f(x)$ is an upper bound of $\bar{f}(C)$.
+		\begin{dem}
+			content...
+		\end{dem}
+		\item $b=\sup C$ iff $f(b)=\sup \bar{f}(C)$.
+		\begin{dem}
+			content...
+		\end{dem}
+	\end{enumerate}
+	
+\end{problema}
+%---------------------------------------
+\subsubsection{Ejercicios 4.5}
+\begin{problema}(Problema 1)
+	Let $A$ be a fully ordered set. Prove that the set of all sections of $A$ (ordered by inclusion) is fully ordered.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+\begin{problema}(Problema 9)
+	Let $A$ be a well-ordered class; prove the following:
+	\begin{enumerate}
+		\item The intersection of any family of sections of $A$ is a section of $A$.
+		\begin{dem}
+			content...
+		\end{dem}
+		\item The union of any family of sections of $A$ is a section of $A$.
+		\begin{dem}
+			content...
+		\end{dem}
+	\end{enumerate}
+	
+\end{problema}
+%---------------------------------------
+\subsubsection{Ejercicios 4.6}
+\begin{problema}(Problema 4)
+	Let $A$ and $B$ be well-ordered classes. Prove that if $f: A \rightarrow B$ and $g: B \rightarrow A$ are isomorphisms, then $g=f^{-1}$.
+	\begin{dem}
+		content...
+	\end{dem}
+\end{problema}
+
+
+
+	
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}

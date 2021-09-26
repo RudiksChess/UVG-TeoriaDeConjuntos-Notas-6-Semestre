@@ -22,27 +22,61 @@
 Por lo tanto, $\operatorname{dom}(G\circ H)= \operatorname{dom} H$.
 \end{proof}
 
+%-------------
 \begin{problema}(Ejercicio 6)
 	Si $G, H, J$, y $K$  son gráficos, probar: 
 	\begin{enumerate}
-		\item Si $G \subseteq H$ y $J \subseteq K$, entonces $G \circ J \subseteq H \circ K$,
+		\item Si $G \subseteq H$ y $J \subseteq K$, entonces $G \circ J \subseteq H \circ K$. 
+		\begin{proof}
+			Sean $G, H, J$, y $K$  gráficos, tal que supóngase que $(x,y)\in G\circ J\implies \exists z\ni (x,z)\in J\wedge (z,y)\in G$. Por hipótesis, $\exists z \ni (x,z)\in K\wedge (z,y)\in K\implies (x,y)\in H\circ K$. Por lo tanto, G $\circ J \subseteq H \circ K$. 
+		\end{proof}
 		\item $G \subseteq H$ si y solo si $G^{-1} \subseteq H^{-1}$.
+		\begin{proof}
+			Sean $G,H,J$ y $K$ gráficos tal que, 
+			\begin{enumerate}
+				\item [($\implies$)] Supóngase $(x,y) \in G^{-1}\implies (y,x)\in G\implies (y,x) \in H\implies (x,y)\in H^{-1}$.
+				\item [($\impliedby$)] Supóngase $(x,y) \in G\implies (y,x)\in G^{-1}\implies (y,x) \in H^{-1}\implies (x,y)\in H$.
+			\end{enumerate}
+		Por lo tanto, $G \subseteq H$ si y solo si $G^{-1} \subseteq H^{-1}$. 
+		\end{proof}
 	\end{enumerate}
 \end{problema}
 
+
+%-------------
 \begin{problema}(Ejercicio 8)
 	Sean $G$ y $H$ gráficos, probar:
+	\begin{enumerate}
 	\item  Si $G \subseteq A \times B$, entonces $G^{-1} \subseteq B \times A$.
+	\begin{proof}
+		Sean $G$ y $H$ gráficos tal que, $(x,y)\in G^{-1} \implies (y,x)\in G\implies (y,x)\in A\times B \implies (x,y)\in (A\times B)^{-1}\implies x\in B\wedge y\in A\implies x \in B\times A$. Por lo tanto, $G \subseteq A \times B$, entonces $G^{-1} \subseteq B \times A$.
+	\end{proof}
 	\item  Si $G \subseteq A \times B$ y $H \subseteq B \times C$, entonces $H \circ G \subseteq A \times C$.
+	\begin{proof}
+		Sean $G$ y $H$ gráficos tal que, $(x,y)\in H\circ G \implies\exists z\ni  (x,z)\in G\wedge  (z,y)\in H\implies \exists z \ni (x,z)\in A\times B\wedge (z,y)\in B\times C\implies\exists z \ni  (x\in A\wedge z\in B)\wedge (z\in B\wedge y\in C)\implies \exists z\ni  (z\in B)\wedge (x\in A\wedge y\in C)\implies (x,y)\in A\times C$. Por lo tanto, $G \subseteq A \times B$ y $H \subseteq B \times C$, entonces $H \circ G \subseteq A \times C$.
+	\end{proof}
+	\end{enumerate}
 \end{problema}
 
 \begin{problema}(Ejercicio 9)
 	Si $G$ y $H$ son gráficos, probar: 
 	\begin{enumerate}
 		\item $\operatorname{dom}(G \cup H)=(\operatorname{dom} G) \cup(\operatorname{dom} H)$.
+		\begin{proof}
+			Sean $G$ y $H$ gráficos tal que, $x\in \operatorname{dom}(G\cup H)\iff \exists y \ni (x,y)\in G\cup H \iff \exists y \ni (x,y)\in G\vee (x,y)\in H \iff x\in \operatorname{dom} G \vee x\in \operatorname{dom} H \iff x\in  (\operatorname{dom} G) \cup(\operatorname{dom} H)$. Por lo tanto, $\operatorname{dom}(G \cup H)=(\operatorname{dom} G) \cup(\operatorname{dom} H)$.
+		\end{proof}
 		\item $\operatorname{ran}(G \cup H)=(\operatorname{ran} G) \cup(\operatorname{ran} H)$.
+		\begin{proof}
+				Sean $G$ y $H$ gráficos tal que, $y\in \operatorname{ran}(G \cup H) \iff \exists x \ni (x,y)\in (G \cup H)\iff (x,y)\in G\vee (x,y)\in H\implies y\in(\operatorname{ran} G) \cup(\operatorname{ran} H) $. Por lo tanto, $\operatorname{ran}(G \cup H)=(\operatorname{ran} G) \cup(\operatorname{ran} H)$.
+		\end{proof}
 		\item $\operatorname{dom} G-\operatorname{dom} H \subseteq \operatorname{dom}(G-H)$.
+		\begin{proof}
+				Sean $G$ y $H$ gráficos tal que, $x\in \operatorname{dom} G\wedge x\not\in \operatorname{dom} H \implies \exists y \ni (x,y)\in G\wedge (x,y)\not\in H\implies \exists y \ni (x,y)\in (G-H) \implies x\in \operatorname{dom}(G-H)$. Por lo tanto, $\operatorname{dom} G-\operatorname{dom} H \subseteq \operatorname{dom}(G-H)$.
+		\end{proof}
 		\item $\operatorname{ran} G-\operatorname{ran} H \subseteq \operatorname{ran}(G-H)$.
+		\begin{proof}
+				Sean $G$ y $H$ gráficos tal que, $y\in \operatorname{ran} G\wedge y\not\in \operatorname{ran} H \implies \exists x \ni (x,y)\in G\wedge (x,y)\not\in H\implies \exists x \ni (x,y)\in (G-H) \implies x\in \operatorname{ran}(G-H)$. Por lo tanto, $\operatorname{ran} G-\operatorname{ran} H \subseteq \operatorname{ran}(G-H)$.
+		\end{proof}
 	\end{enumerate}
 
 \end{problema}

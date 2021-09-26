@@ -1,0 +1,190 @@
+   \input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+\section{Problema } 
+
+\subsection{Sección 2.2}
+\begin{problema}[Ejercicio 5]
+	Sean $f: A \rightarrow B$ y $g: C \rightarrow D$ funciones. El producto de $f$ y $g$  es la función definida como: 
+	$$
+	[f \cdot g](x, y)=(f(x), g(y)) \text { para cada }(x, y) \in A \times C
+	$$
+	\begin{enumerate}
+		\item Probar que $f \cdot g$ es una función de $A \times C$ a $B \times D$. 
+		\begin{dem}
+			A probar: $f\cdot g$ es función tal que usando la definición 
+			\begin{enumerate}
+				\item Sea $\forall (x,y)\in A\times C, \exists z\in B\times D\ni ((x,y),z)\in f\cdot g\implies z = 	[f \cdot g](x, y)=(f(x), g(y)) $.  
+				\item Sean $z_1 = [f \cdot g](x, y)$ y $z_2= [f \cdot g](x, y)$ tales que 
+				\begin{align*}
+					(f(x), g(y)) &= (f(x), g(y)) \\
+					[f \cdot g](x, y) &= [f \cdot g](x, y)\\
+					z_1 = z_2
+				\end{align*}
+			\end{enumerate}
+			
+		\end{dem}
+		\item Probar que si $f$ y $g$ son inyectivas, entonces $f \cdot g$ es inyectiva, y si $f$ y $g$ son sobreyectivas, entonces $f \cdot g$ es sobreyectiva. 
+		\begin{dem}
+			Probaremos inyectividad y sobreyectividad. 
+			\begin{enumerate}
+				\item Inyectividad. Sea 
+					$[f\cdot g](a,b) = [f\cdot g](c,d)\implies(f(a),g(b))=(f(c),g(d))\implies [f(a)=f(c)]\wedge [g(b)=g(d)]\implies f$ y $g$ son inyectivas $\implies[a=c]\wedge [b=d]\implies (a,b)=(c,d)$. Por lo tanto, $f\cdot g$ es inyectiva.   
+				\item Sobreyectividad. Sea $\forall z\in B\times D, \exists(x,y)\in A\times C\ni ((x,y),z)\in f\cdot g\implies z = 	[f \cdot g](x, y)=(f(x), g(y)) $.  
+			\end{enumerate}
+		\end{dem}
+		\item Probar que $\operatorname{ran}[f \cdot g]=(\operatorname{ran} f) \times(\operatorname{ran} g)$.
+		\begin{dem}
+			A probar: $\operatorname{ran}[f \cdot g]=(\operatorname{ran} f) \times(\operatorname{ran} g)$ tal que 
+			\begin{enumerate} 
+				\item[$(\subseteq)$] $(x,y) \in \operatorname{ran}[f \cdot g]\implies (x,y)\in C\times D\implies (x\in C)\vee (y\in D)\implies $ Por la biyectividad de $f$ y $g$ $\implies x\in (\operatorname{ran} f) \vee y \in (\operatorname{ran} g)\implies (x,y)\in (\operatorname{ran} f) \times(\operatorname{ran} g)$. $\therefore \operatorname{ran}[f \cdot g]\subseteq (\operatorname{ran} f) \times(\operatorname{ran} g)$. 
+				\item[$(\supseteq)$] $(x,y)\in \left[(\operatorname{ran} f) \times(\operatorname{ran} g)\right]\implies  (x\in \operatorname{ran} f) \wedge (y\in \operatorname{ran} g)\implies (\exists w \ni (w, x)\in f)\wedge (\exists z \ni (z, y)\in g)\implies ((w,x)\in A\times C)\wedge ((z,y)\in B\times D)\implies (x\in C)\wedge (y\in D)\implies (x,y)\in C\times D\implies $ Por la biyectividad $(x,y)\in\operatorname{ran}[f \cdot g]$. $\therefore  (\operatorname{ran} f) \times(\operatorname{ran} g)\subseteq  \operatorname{ran}[f \cdot g]$.
+			\end{enumerate}
+			
+			Por lo tanto, $\operatorname{ran}[f \cdot g]=(\operatorname{ran} f) \times(\operatorname{ran} g)$.
+			
+		\end{dem}
+	\end{enumerate}
+	
+\end{problema}
+
+
+%---------------
+\subsection{Sección 2.3}
+\begin{problema}[Ejercicio 2]
+	Supóngase que $f: A \rightarrow B$ y $g: B \rightarrow C$ son funciones. 
+	\begin{enumerate}
+		\item Probar que si $g \circ f$  es inyectiva, entonces $f$  es inyectiva. 
+		\begin{dem}
+			Sea $f(a)=f(b), \text{para algunos }  a,b\in A \implies $ Por hipótesis, $g(f(a))=g(f(b)) \implies a=b$. Por lo tanto, $f$ debe ser inyectiva. 
+		\end{dem}
+		\item Probar que si $g \circ f$  es sobreyectiva, entonces $g$  es sobreyectiva.
+		\begin{dem}
+			Por hipótesis, $\forall z \in C, \exists x \in A \ni z=g(f(x))$. Ahora bien, dígase que $\forall z \in C, \exists y=f(x) \in B\ni z=g(y)$.
+		\end{dem}
+		\item Concluir que si $g \circ f$ es biyectiva, entonces $f$  es inyectiva y $g$ es sobreyectiva.
+		\begin{dem}
+			Por la definición de biyectividad, entonces $g\circ f$ es inyectiva y sobreyectiva y por los dos incisos anteriores entonces $f$  es inyectiva y $g$ es sobreyectiva.
+		\end{dem}
+	\end{enumerate}
+\end{problema}
+
+%---------------
+\begin{problema}[Ejercicio 5]
+	Sean $g: B \rightarrow C$ y $h: B \rightarrow C$ son funciones. Suponga que $g \circ f=h \circ f$ para cada función $f: A \rightarrow B$. Probar que $g=h$.
+\end{problema}
+\begin{dem}
+	Por hipótesis, $g(f(y))=h(f(y)), \forall y \in B$. Por la definición de función, $\forall y \in B, \exists x\in A \ni y=f(x)$. Por lo tanto, $(z,y)\in g \iff z= g(y)\iff z= g(f(x))\iff z= h(f(x))\iff z= h(y)\iff (z,y)\in h$. Por lo tanto, $g=h$.  
+\end{dem}
+\newpage
+	\begin{cajita}
+		Sean $f: A\to B,g:B\to C$ y $g\circ f: A\to C$ funciones.
+	\end{cajita}
+\section{Problema}
+\begin{problema}
+	Si $f$ y $g$ son inyectivas, entonces $(\mathrm{g} \circ \mathrm{f})$ es inyectiva.
+\end{problema}
+\begin{dem}
+	Sea $g(f(a))=g(f(b))\implies f(a)=f(b)\implies a=b$. Por lo tanto, $g\circ f$ es inyectiva. 
+\end{dem}
+\section{Problema}
+\begin{problema}
+	Si $f$ y $g$ son sobreyectivas, entonces $(\mathrm{g} \circ \mathrm{f})$ es sobreyectiva. 
+\end{problema}
+\begin{dem}
+	Por hipótesis, sean $\forall h \in B, \exists x \in A \ni h=f(x)$ y $\forall z \in C, \exists i \in B \ni z=g(i)$.  $\implies \forall z \in C, \exists x \in A \ni z=g(f(x))$. Por lo tanto, $(\mathrm{g} \circ \mathrm{f})$ es sobreyectiva. 
+\end{dem}
+
+\section{Problema}
+\begin{problema}
+	Si $f$ y $g$ son biyectivas, entonces $(\mathrm{g} \circ \mathrm{f})$ es biyectiva.
+\end{problema}
+\begin{dem}
+   Por hipótesis, $f$ y $g$ son inyectivas y sobreyectivas. $\implies$ Por lo dos incisos anteriores $g\circ f$ es inyectiva y sobreyectiva. Por lo tanto,  $(\mathrm{g} \circ \mathrm{f})$ es biyectiva.
+\end{dem}
+
+\section{Problema}
+Lea la sección 4 del capítulo 2 del libro Set Theory de Charles Pinter y resuelva
+\subsection{Sección 2.4}
+\begin{problema}[Problema 2]
+	Suponga que $f: A \rightarrow B$ es una función, $C \subseteq A$ y $D \subseteq B$
+	\begin{enumerate}
+		\item  Si $f$  es inyectiva, probar que $C=\breve{f}[\bar{f}(C)]$.
+		\begin{dem}
+	Sean $f:A\to B$ tal que,   
+			\begin{enumerate}
+				\item[$\subseteq$]  Sea $ x\in C$, como $f$ es función $\exists y \in B\ni f(x)=y\implies f(x)\in \bar{f}(C)\implies x\in \breve{f}[\bar{f}(C)]$.
+				 $\therefore C\subseteq \breve{f}[\bar{f}(C)]$. 
+				\item[$\supseteq$] Sea $x\in\breve{f}[\bar{f}(C)]\implies f(x)\in \bar{f}(C) \implies \exists w \in C \ni f(x)=f(w)\implies $ Por la inyectividad $x=w\implies x\in C$. $\therefore \breve{f}[\bar{f}(C)]\subseteq C$. 
+			\end{enumerate}
+			 
+		\end{dem}
+		\item Si $f$  es sobreyectiva, probar que $D=\bar{f}[\breve{f}(\mathrm{D})]$
+		\begin{dem}
+			Sean $f:A\to B$ tal que,   
+				\begin{enumerate}
+				\item[$\subseteq$] Sea $y\in D$. Por la sobreyectividad $\exists w \in \breve{f}(\mathrm{D}) \ni  y = f(w)\implies y \in \bar{f}[\breve{f}(\mathrm{D})]$. $\therefore D\subseteq\bar{f}[\breve{f}(\mathrm{D})]$. 
+				\item[$\supseteq$] Sea $x\in \bar{f}[\breve{f}(\mathrm{D})] \implies \exists w \in \breve{f}(\mathrm{D}) \ni  x = f(w)\implies f(w)\in D\ni x=f(w)\implies x\in D$. $\therefore \bar{f}[\breve{f}(\mathrm{D})]\subseteq D$. 
+			\end{enumerate}
+		Por lo tanto, $D=\bar{f}[\breve{f}(\mathrm{D})]$. 
+		\end{dem}
+	\end{enumerate}
+\end{problema}
+\begin{problema}[Problema 4]
+	Sea $f: A \rightarrow B$ sea un función. Probar lo siguiente: 
+	\begin{enumerate}
+		\item  Si $f$  es inyectiva, entonces $\breve{f} \circ \bar{f}$ es biyectiva. [Hint: Usar el resultado del ejercicio 2(1).]
+		\begin{dem}
+			 Debemos probar que $\breve{f} \circ \bar{f}$ es inyectiva y sobreyectiva tal que: 
+			\begin{enumerate}
+				\item Inyectividad. Sea $\forall x, y \in \breve{f} \circ \bar{f}(x) = \breve{f} \circ \bar{f}(y)\implies \breve{f}(\bar{f}(x))= \breve{f}(\bar{f}(y))$. Conocemos del \textbf{Problema 5.1 (Problema 2.1)} que dado $C=\breve{f}[\bar{f}(C)]$, donde $C\subseteq  A$ y $f$ es inyectiva. $\implies x= y$. $\therefore \breve{f} \circ \bar{f} $ es inyectiva.  
+				\item Sobreyectividad. Conocemos del \textbf{Problema 5.1 (Problema 2.1)} que $\breve{f} \circ \bar{f}(x)=x$. Sea $x\in C$, entonces por la definición de función $\exists y \in A  \ni y= \bar{f}(x)$. Por lo tanto, $\breve{f}(\bar{f}(x)) =\breve{f}(y) = x$. 
+			\end{enumerate}
+		\end{dem}
+		\item Si $f$ es sobreyectiva, entonces $\bar{f} \circ \breve{f}$ es biyectiva. [Hint: Usar el resultado del ejercicio 2(2).]
+			\begin{dem}
+		 Debemos probar que $\bar{f} \circ \breve{f}$ es inyectiva y sobreyectiva tal que: 
+			\begin{enumerate}
+				\item Inyectividad. Sea $\forall x, y \in A \ni \bar{f} \circ \breve{f}(x)=\bar{f} \circ \breve{f}(y)\implies \bar{f} (\breve{f}(x))=\bar{f} (\breve{f}(y))$.  Conocemos del \textbf{Problema 5.1 (Problema 2.2)} que dado $D=\bar{f}[\breve{f}(\mathrm{D})]$, donde $D\subseteq B$ y $f$ es sobreyectiva.$\implies x= y$. $\therefore \bar{f} \circ \breve{f}$ es inyectiva.
+				\item Sobreyectividad. Conocemos del \textbf{Problema 5.1 (Problema 2.2)} que $\bar{f} \circ \breve{f}(x)=x$. Sea $y\in D$, entonces por la definición de función $\exists x \in A\ni \breve{f}(y) = x$. Por lo tanto, $\bar{f}(\breve{f}(y)) =\bar{f}(x) = x$. 
+			\end{enumerate} 
+		\end{dem}
+	\end{enumerate}
+
+\end{problema}
+\begin{problema}[Problema 8]
+	Sea $f: A \rightarrow B$ una función. Probar que 
+	$$
+	\bar{f}(C \cap D)=\bar{f}(C) \cap \bar{f}(D)
+	$$
+	para cada par de subclases $C \subseteq A$ y $D \subseteq A$ si y solo si $f$ es inyectiva.
+\end{problema}
+\begin{dem}
+	Sea $f$ una función, tales que 
+	\begin{enumerate}
+		
+		\item [$(\impliedby)$ ]  A probar: $f$ inyectiva, entonces $\bar{f}(C \cap D)=\bar{f}(C) \cap \bar{f}(D)$. Probaremos la doble contención: 
+		\begin{enumerate}
+		\item[$(\supseteq)$] Sea $y\in \bar{f}(C \cap D)\implies \exists x \in C\cap D \ni y = f(x)\implies x\in C \wedge x\in D \ni y=f(x)\implies (x\in C\ni y=f(x))\wedge (x\in D\ni y=f(x)) \implies x\in \bar{f}(C) \cap \bar{f}(D)$. $\therefore \bar{f}(C \cap D)\subseteq \bar{f}(C) \cap \bar{f}(D)$
+		\item[$(\subseteq)$] Sea $y\in \bar{f}(C) \cap \bar{f}(D) \implies y \in \bar{f}(C) \wedge y \in \bar{f}(D)\implies (\exists z\in C \ni y = f(z))\wedge (\exists w\in C\ni y = f(w))\implies (\exists z\in C)\wedge(\exists w \in C)\ni y= f(z)=f(w)\implies$ Por la inyectividad, $w=z$. $\therefore \bar{f}(C) \cap \bar{f}(D) \subseteq \bar{f}(C \cap D)$.
+		
+		\end{enumerate}
+	Por lo tanto, $\bar{f}(C \cap D)=\bar{f}(C) \cap \bar{f}(D) $ .
+		\item [$(\implies)$ ] A probar: $\bar{f}(C \cap D)=\bar{f}(C) \cap \bar{f}(D)$ entonces $f$ es inyectiva. Por reducción al absurdo, supóngase que $f$ no es inyectiva, tal que 
+	$$\exists x,y \in A\ni z = f(x) = f(y) \implies x\neq y.$$
+	Sin embargo, nótese que si $f$ no es inyectiva entonces no se cumpliría la contención del inciso anterior, tal que $\bar{f}(C) \cap \bar{f}(D) \not \subseteq \bar{f}(C \cap D) (\to \gets)$ ya que $\bar{f}(C \cap D)=\bar{f}(C) \cap \bar{f}(D)$ por hipótesis. Por lo tanto, $f$ es inyectiva. 
+	\end{enumerate}
+
+
+\end{dem}
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}
